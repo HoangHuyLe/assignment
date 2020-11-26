@@ -1,0 +1,89 @@
+html,
+body {
+  height: 100% !important;
+  overflow: hidden;
+}
+
+h1 {
+  color: rgb(231, 0, 0);
+  font-size: 30px;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+p {
+  text-align: justify;
+}
+
+ul {
+  list-style-image: url(../images/About_us/checkbox.png);
+}
+
+.absolute {
+  position: absolute;
+  top: 26vw;
+  left: 14vw;
+  border-radius: 25%;
+
+  background-color: transparent;
+  border: none;
+
+  width: 12vw;
+  height: 3vw;
+}
+
+.relative {
+  position: relative;
+}
+
+.profit {
+  overflow: hidden;
+  background-image: url(../images/About_us/bg_seo.png);
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  background-position: right bottom;
+}
+
+.reason {
+  overflow: hidden;
+  background-image: url(../images/About_us/bg_why.jpg);
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-us-banner {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.quality-icon {
+  padding-right: 5px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.shadow {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
+}
+
+.reason-box {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
+}
+
+.ad {
+  min-height: 100%;
+  padding-top: 100px;
+}
