@@ -20,7 +20,7 @@ p {
 }
 
 ul {
-  list-style-image: url(../images/About_us/checkbox.png);
+  list-style-image: url(../../images/About_us/checkbox.png);
 }
 
 .absolute {
@@ -42,17 +42,17 @@ ul {
 
 .profit {
   overflow: hidden;
-  background-image: url(../images/About_us/bg_seo.png);
+  background-image: url(../../images/About_us/bg_seo.png);
   background-repeat: no-repeat;
-  padding-top: 200px;
+  /* padding-top: 200px; */
   background-position: right bottom;
 }
 
 .reason {
   overflow: hidden;
-  background-image: url(../images/About_us/bg_why.jpg);
+  background-image: url(../../images/About_us/bg_why.jpg);
   background-repeat: no-repeat;
-  padding-top: 200px;
+  padding-top: 100px;
   background-size: cover;
   background-position: center;
 }
@@ -85,5 +85,18 @@ ul {
 
 .ad {
   min-height: 100%;
-  padding-top: 100px;
+  overflow: hidden;
+  /* padding-top: 100px; */
+}
+
+.center-about-us {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
