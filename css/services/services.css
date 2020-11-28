@@ -90,8 +90,12 @@
 }
 
 .nav-list .menu:hover {
-    color: #53c5d5;
+    color: #f2184f;
     cursor: pointer;
+}
+
+.menu-active {
+    background-color: #f2184f;
 }
 
 /* Service 1,2 */
