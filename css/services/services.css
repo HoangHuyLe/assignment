@@ -1,0 +1,415 @@
+.main-container {
+    max-width: 1950px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.inside-container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+/* Banner */
+
+.banner {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(236, 100, 93, 0.7), rgba(0, 0, 0, .7)), url('../../images/banner/banner_3.png');
+    height: 500px;
+    background-size: cover;
+}
+
+.banner i {
+    font-size: 35px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+}
+
+.banner .section-part {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@-webkit-keyframes blinker {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+
+.blink {
+    text-decoration: blink;
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+
+/* small navbar */
+
+.nav-bkg-color {
+    z-index: 999;
+    background-color: #e6e6e6;
+}
+
+.nav-contain nav {
+    padding: 15px 15px;
+}
+
+.mobile-nav .nav-contain nav {
+    padding: 0;
+}
+
+.mobile-nav .title {
+    font-size: 25px;
+    color: #f2184f;
+    font-family: Dosis Regular;
+}
+
+.mobile-nav .nav-list .menu {
+    padding-bottom: 5px;
+}
+
+.nav-list .menu {
+    color: #333333;
+    font-family: Dosis Regular;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 20px;
+    text-decoration: none;
+}
+
+.nav-list .menu:hover {
+    color: #53c5d5;
+    cursor: pointer;
+}
+
+/* Service 1,2 */
+
+.service-content {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    display: block;
+    text-align: center;
+}
+
+.service-content h2 {
+    font-family: Dosis-Bold;
+    font-size: 40px;
+    /* line-height: 26px; */
+}
+
+.service-content hr {
+    background-color: #f2184f;
+    width: 117px;
+    margin-top: 10px;
+}
+
+.service-content h3 {
+    font-family: Dosis-Bold;
+    font-size: 40px;
+}
+
+.service-content p {
+    width: 70%;
+    font-size: 20px;
+    line-height: 35px;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.service-colum h3 {
+    font-family: Dosis-bold;
+    font-size: 25px;
+    line-height: 26px;
+}
+
+.service-colum p {
+    width: 93%;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.icon-img {
+    text-align: center;
+}
+
+.icon-img i {
+    color: #00c6d7;
+    font-size: 35px;
+    border: 2px solid #00c6d7;
+    border-radius: 50%;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.star-hover:hover {
+    cursor: pointer;
+}
+
+.star-hover:hover i {
+    background-color: #00c6d7;
+    color: #fff;
+    border-color: #00c6d7;
+    cursor: pointer;
+}
+
+.icon-img .fa {
+    padding: 16px 16px;
+}
+
+.service2-col h3 {
+    text-align: center;
+    font-family: Open Sans Condensed, sans-serif;
+    ;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 15px;
+}
+
+.service2-col p {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Service3: Ecommerce */
+
+.Ecommerce-sec {
+    background-color: #ecf0f1;
+}
+
+.Ecommerce-row {
+    padding-top: 100px;
+}
+
+.detail-Ecommerce h2 {
+    font-family: Dosis-bold;
+    font-size: 44px;
+    line-height: 26px;
+}
+
+.detail-Ecommerce hr {
+    max-width: 117px;
+    background-color: #f2184f;
+    height: 2px;
+    margin: 25px 0px 30px 0px;
+}
+
+.detail-Ecommerce p {
+    width: 98%;
+    font-family: Dosis Regular;
+    font-size: 22px;
+    line-height: 35px;
+    text-align: justify;
+}
+
+.Ecommerce-cols {
+    margin-top: 30px;
+}
+
+.Ecommerce-cols .detail {
+    margin: 35px 0px;
+}
+
+.detail p {
+    width: 93%;
+    text-align: justify;
+}
+
+.Ecommerce-img {
+    margin-top: 130px;
+    text-align: center;
+}
+
+/* Service4: Programming web app */
+
+#service4 {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(28, 64, 143, 0.7), rgba(0, 0, 0, .8)), url('../../images/services_img/service4_bg.jpg');
+    height: 650px;
+    background-size: cover;
+}
+
+.service4-title {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+.service4-title h2 {
+    font-family: Dosis-Bold;
+    font-size: 40px;
+    color: #fff;
+    /* line-height: 26px; */
+}
+
+.service4-title p {
+    width: 70%;
+    font-size: 20px;
+    line-height: 35px;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.service4-title hr {
+    background-color: #f2184f;
+    width: 117px;
+    margin-top: 10px;
+}
+
+.service4-content h3 {
+    font-family: Dosis-Bold;
+    font-size: 30px;
+    color: white;
+}
+
+.service4-content p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 35px;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+    color: #fff;
+    padding-right: 20px;
+}
+
+/*Service5: Marketing campaign*/
+
+#service5 {
+    background-color: #ecf0f1;
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+
+.service5-img {
+    margin-top: 90px;
+}
+
+.service5-detail {
+    margin-top: 20px;
+}
+
+.service5-detail h2 {
+    font-family: Dosis-bold;
+    font-size: 44px;
+    line-height: 26px;
+}
+
+.service5-detail hr {
+    margin: 10px 0px 30px 0px;
+    width: 117px;
+    height: 2px;
+    background-color: #f2184f;
+}
+
+.service5-detail .desc {
+    font-family: Dosis Regular;
+    font-size: 22px;
+    line-height: 35px;
+    margin-bottom: 20px;
+}
+
+.service5-detail i {
+    width: 19px;
+    color: #00c6d7;
+    margin-right: 15px;
+}
+
+/* Service6: Hosting, tên miền */
+
+#service6 {
+    padding-bottom: 60px;
+}
+
+.service6-title {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    display: block;
+    text-align: center;
+}
+
+.service6-title h2 {
+    font-family: Dosis-Bold;
+    font-size: 40px;
+    line-height: 26px;
+}
+
+.service6-title p {
+    width: 70%;
+    font-size: 20px;
+    line-height: 35px;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.service6-title hr {
+    background-color: #f2184f;
+    width: 117px;
+    margin-top: 10px;
+}
+
+.service6-content {
+    display: block;
+    text-align: center;
+}
+
+.service6-content h3 {
+    font-family: Dosis-Bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Responsive */
+
+/* tablets */
+
+@media (min-width: 992px) and (max-width: 1190px) {
+    #service4 {
+        height: 700px;
+    }
+}
+
+/* only small tablets */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .Ecommerce-cols .detail {
+        margin: 20px 0px;
+    }
+    #service4 {
+        height: 780px;
+    }
+    #service5 {
+        padding-top: 0px;
+    }
+}
+
+/* mobile or only mobile */
+
+@media (max-width: 767px) {
+    .service4-title p {
+        width: 100%;        
+    }
+    #service4 {
+        height: 1150px;
+    }
+    .service4-content h3 {
+        margin-top: 10px;
+    }
+    #service5.main-container {
+        padding-top: 0;
+    }
+}
