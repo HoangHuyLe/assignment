@@ -1,3 +1,0 @@
-1) Chỉnh cây thư mục
-- Xóa magnific-popup.css và jquery.magnific-popup.min.js
-- Xóa animate.css
