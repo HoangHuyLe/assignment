@@ -34,8 +34,8 @@ Chú thích: (v) - đã hoàn thành
 ### Hướng dẫn chạy Project
 1. Download the zip file
 2. Extract the file and copy assignment folder
-3. Paste inside root directory(xampp/htdocs)
+3. Paste inside root directory (xampp/htdocs)
 4. Open PHPMyAdmin (http://localhost/phpmyadmin)
 5. Create a database with name assignment
-6. Import assignment.sql file (given inside the zip package in SQL file folder)
+6. Import assignment.sql file (in SQL folder)
 7. Run the script http://localhost/assignment (frontend)
