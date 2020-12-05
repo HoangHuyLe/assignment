@@ -40,6 +40,11 @@
     color: #333;
 }
 
+.dropdown .btn {
+    background-color: #f2184f;
+    color: #fff;    
+}
+
 /* Section with background
 --------------------------------*/
 

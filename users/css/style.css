@@ -1,0 +1,50 @@
+.login-bg{
+    width: 95%;
+    border-right: 1px solid rgb(224, 221, 221);
+    padding-right: 2rem;
+}
+
+
+.facebook {
+    background-color: #4267b2;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: #fff;
+    width: 100%;
+}
+
+.google {
+    background-color: #dc4e41;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: #fff;
+    width: 100%;
+}
+
+.line {
+    height: 1px;
+    background-color: #E0E0E0;
+    width: 45%;
+    margin-top: 12px;
+}
+
+.or {
+    width: 10%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+    color: #fff; 
+    text-align: center;  
+    padding: 5px 0px; 
+}
