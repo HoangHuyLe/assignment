@@ -1,8 +1,41 @@
-##### 1) Template tham khảo:
-- https://www.free-css.com/free-css-templates/page254/rd-business
-- https://www.free-css.com/free-css-templates/page255/bizpage
-- https://www.free-css.com/free-css-templates/page220/gp
-##### 2) Website tham khảo về nội dung
-- https://thietkeweb9999.com/ (Quy trình thiết kế web)
-- https://www.canhcam.vn/ (dịch vụ, các dự án tiêu biểu, khách hàng)
-- https://mona.media/(bảng giá)
+### Thông tin về project
+- Tên: Assignment - Lập trình web
+- Ngôn ngữ sử dụng: PHP
+- Database: MySQL
+- Thiết kế giao diện: HTML, CSS, JS
+- Công nghệ sử dụng: AJAX, jQuery
+- Phầm mềm hỗ trợ: XAMPP
+---
+### Danh sách các tính năng thiết kế:
+Chú thích: (v) - đã hoàn thành
+#### 1. Khách 
+- Xem các thông tin public trên trang web (v) (huy)
+- Đăng ký (v) (huy)
+- Đăng nhập (v) (huy)
+- Đăng nhập với Facebook, Google
+- Quên mật khẩu
+- Thực hiện kiểm tra dữ liệu đầu vào ở Clien side và Server side (v) (huy)
+#### 2. Thành viên
+- Thiết kế giao diện trang cá nhân
+- Thay đổi thông tin cá nhân
+- Thay đổi mật khẩu
+- Thay đổi hình đại diện
+- Viết bình luận, đăng tin
+- Đặt yêu cầu gói dịch vụ
+#### 3. Quản trị viên
+- Thiết kế giao diện trang quản trị
+- Quản lý thành viên: xem thông tin, xóa thông tin, ...
+- Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ...
+- Hiện thực phân trang hiển thị cho các tính năng quản lý
+#### 4. Tìm kiếm
+- Tính năng tìm kiếm tài nguyên đơn giản trên trang web
+#### 5. Tính năng khác
+---
+### Hướng dẫn chạy Project
+1. Download the zip file
+2. Extract the file and copy clientms folder
+3. Paste inside root directory(for xampp xampp/htdocs)
+4. Open PHPMyAdmin (http://localhost/phpmyadmin)
+5. Create a database with name assignment
+6. Import assignment.sql file (given inside the zip package in SQL file folder)
+7. Run the script http://localhost/assignment (frontend)
