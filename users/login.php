@@ -19,7 +19,7 @@ if(isset($_POST['submit'])){
         exit;
     }
     else {
-        echo "That bai";
+        echo "<script type='text/javascript'>alert('Tài khoản hoặc mật khẩu không hợp lệ!');</script>";;
     }
 }
 ?>
@@ -33,9 +33,11 @@ if(isset($_POST['submit'])){
     <title>Login</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
 
 
 </head>
