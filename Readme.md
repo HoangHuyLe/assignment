@@ -23,10 +23,10 @@ Chú thích: (v) - đã hoàn thành
 - Viết bình luận, đăng tin
 - Đặt yêu cầu gói dịch vụ
 #### 3. Quản trị viên
-- Thiết kế giao diện trang quản trị
-- Quản lý thành viên: xem thông tin, xóa thông tin, ...
-- Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ...
-- Hiện thực phân trang hiển thị cho các tính năng quản lý
+- Thiết kế giao diện trang quản trị (v) (huy)
+- Quản lý thành viên: xem thông tin, xóa thông tin, ... (đang làm) (huy)
+- Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ... (đang làm) (huy)
+- Hiện thực phân trang hiển thị cho các tính năng quản lý (đang làm) (huy)
 #### 4. Tìm kiếm
 - Tính năng tìm kiếm tài nguyên đơn giản trên trang web
 #### 5. Tính năng khác
