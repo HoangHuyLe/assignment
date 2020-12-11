@@ -39,7 +39,7 @@ if (mysqli_num_rows($result) > 0) {
 
 // Insert account to users table
 if ($error == false) {
-    $query = "INSERT INTO users (Username, Password, Email) VALUES ('$username','$password','$email')";
+    $query = "INSERT INTO users (Username, Password, Email, Type) VALUES ('$username','$password','$email', 'normal')";
     $result = mysqli_query($con, $query);
     echo "<span style='color:green;'>" . "Đăng ký thành công. Bạn có thể đăng nhập." . "</span>";
 } else {

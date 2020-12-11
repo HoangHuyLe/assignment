@@ -26,36 +26,171 @@ a:focus {
     margin: 30px 0;
 }
 
-/* ---------------------------------------------------
-    DASHBOARD STYLE
------------------------------------------------------ */
-
 .wrapper {
     display: flex;
     width: 100%;
 }
 
 #content {
-    width: calc(100% - 250px); 
-    margin-top: 50px    ;   
+    width: calc(100% - 250px);
+    margin-top: 50px;
     padding: 20px 40px;
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
     top: 0;
     right: 0;
-}   
+}
 
 #content.active {
     width: 100%;
 }
 
-.box > .card-body {
+.breadcrumb-item {
+    color: blue;
+}
+
+
+/* ------ header style ------- */
+
+#header {
+    height: 60px;
+    background-color: #343a40!important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#header img {
+    margin-left: 30px;
+}
+
+
+/* ------ sidebar style ------- */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #343a40;
+    color: #fff;
+    transition: all 0.3s;
+    border-top: 1px solid #4b545c;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 15px;
+    background: #404068;
+    border-bottom: 1px solid #4b545c;
+    text-align: center;
+}
+
+#sidebar .sidebar-header p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    background: #909192;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.8em !important;
+    padding-left: 35px !important;
+    background: #444a50;
+}
+
+.selected {
+    background: #717274;
+}
+
+.selected-1 {
+    color: rgb(61, 243, 243);
+}
+
+
+/* ------ ajax indicator ------- */
+
+#wait {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1060;
+}
+
+
+/* ------ dashboard.php STYLE ------*/
+
+.box>.card-body {
     padding: 1rem;
 }
 
 .box .card-title {
     margin-bottom: 0;
+}
+
+
+/* ------ view-users.php STYLE ------*/
+
+#tbl-users button.btn {
+    padding: 0 5px;
+    margin-right: 5px;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -64,5 +199,5 @@ a:focus {
     }
     #content.active {
         width: calc(100% - 250px);
-    }   
+    }
 }
