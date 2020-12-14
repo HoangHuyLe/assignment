@@ -30,7 +30,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Thêm thành viên</li>
                 </ol>
             </nav>
-            <div id="respone-status"></div>
+            <div id="respone-status" class="text-center"></div>
             <form id="add-form" class="form row">
                 <div class="col-6">
                     <div class="form-control-custom">
@@ -88,6 +88,11 @@
         </div>
     </div>
 
+    <!-- loading indicator -->
+    <div id="wait">
+        <img src='images/ajax-loader.gif' alt="loader">
+    </div>
+
     <!-- ALL JS FILES -->
     <script src="../lib/bootstrap/jquery.min.js"></script>
     <script src="../lib/bootstrap/popper.min.js"></script>
@@ -102,6 +107,13 @@
             $('a#manage-users').attr('aria-expanded', 'true');
             $('#menu-users').addClass('show');
             $('a#add-user').addClass('selected-1');
+
+            $(document).ajaxStart(function() {
+                $("#wait").css("display", "block");
+            });
+            $(document).ajaxComplete(function() {
+                $("#wait").css("display", "none");
+            });
         });
     </script>
 </body>

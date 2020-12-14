@@ -100,4 +100,23 @@ $(document).ready(function() {
         });
     });
 
+
+    /* ---------------------
+    // 4) Search data
+    ------------------------*/
+    $("#search").on('click', function(event) {
+        event.preventDefault();
+        let search_value = $('#search-value').val();
+        console.log(search_value);
+        $.ajax({
+            url: 'controller/search-user.php',
+            method: 'get',
+            data: { 'search': search_value },
+            dataType: 'html',
+            success: function(data) {
+                $("#tbl-users-data").html(data);
+            }
+        })
+    })
+
 });

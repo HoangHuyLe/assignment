@@ -31,6 +31,11 @@
 
             <h5 class="mb-4">Bảng thành viên hiện có:</h5>
 
+            <form class="form-inline mb-3">
+                <button id="search" class="btn btn-outline-success mr-sm-2" type="submit">Tìm kiếm</button>
+                <input id="search-value" class="form-control w-50" type="search" placeholder="Tìm kiếm theo tài khoản, email và tên đầy đủ" aria-label="Search">
+            </form>
+
             <table id="tbl-users" class="table table-bordered">
                 <thead>
                     <tr>
@@ -41,9 +46,9 @@
                         <th scope="col" class='table-primary'>Phân loại</th>
                         <th scope="col" class='table-primary'>Thao tác</th>
                     </tr>
+                <tbody id="tbl-users-data"></tbody>
                 </thead>
-                <tbody id="tbl-users-data">
-                </tbody>
+
             </table>
         </div>
     </div>
@@ -152,6 +157,7 @@
             });
         });
     </script>
+
 </body>
 
 </html>

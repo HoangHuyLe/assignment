@@ -2,9 +2,10 @@
 include('../include/dbconnect.php');
 $query = "SELECT * FROM users";
 $result = mysqli_query($con, $query);
+$order_num = 1;
 while ($row = mysqli_fetch_assoc($result)) {
     echo "<tr>";
-    echo "<td scope='row'> {$row['Id']} </td>";
+    echo "<td scope='row'>" .$order_num++ ."</td>";
     echo "<td> {$row['Username']} </td>";
     echo "<td> {$row['Email']} </td>";
     echo "<td> {$row['Fullname']} </td>";
