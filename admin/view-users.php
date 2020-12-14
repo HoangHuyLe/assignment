@@ -44,6 +44,7 @@
                         <th scope="col" class='table-primary'>Email</th>
                         <th scope="col" class='table-primary'>Tên đầy đủ</th>
                         <th scope="col" class='table-primary'>Phân loại</th>
+                        <th scope="col" class='table-primary'>Ảnh</th>
                         <th scope="col" class='table-primary'>Thao tác</th>
                     </tr>
                 <tbody id="tbl-users-data"></tbody>
@@ -65,12 +66,7 @@
                 </div>
                 <div class="modal-body">
                     <form id="edit-data-form">
-                        <div class="form-group row">
-                            <label class="col-3 col-form-label">STT</label>
-                            <div class="col-9">
-                                <input type="text" class="form-control" name='id-edit' id="id-edit" disabled>
-                            </div>
-                        </div>
+                        <input type="hidden" name='id-edit' id="id-edit" value="">
                         <div class="form-group row">
                             <label class="col-3 col-form-label">Tài khoản</label>
                             <div class="col-9">
@@ -94,6 +90,12 @@
                             <div class="col-9 d-flex align-items-center radio">
                                 <input type="radio" class='mr-1' id="normal" name="type" value="normal" checked> <span class="mr-4">Normal </span>
                                 <input type="radio" class="mr-1" id="vip" name="type" value="VIP"> VIP
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Ảnh</label>
+                            <div class="col-9">
+                                <img src="../users/images/user-avatar/hoanghuy4_avatar.jpg" width='100px' hight='100px' name='image-edit' id="image-edit" alt="avatar">
                             </div>
                         </div>
                     </form>

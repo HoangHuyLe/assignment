@@ -35,7 +35,10 @@ $(document).ready(function() {
                 $('#fullname-edit').val(data['fullname']);
                 if (data['type'] == 'VIP') {
                     $("#vip").attr('checked', true)
-                }
+                };
+                let img = "../users/images/user-avatar/" + data['image'];
+                console.log(img)
+                $('#image-edit').attr("src", img);
                 $('#edit-modal').modal('toggle');
             }
         })
@@ -88,7 +91,6 @@ $(document).ready(function() {
                 success: function(data) {
                     if (data == 'ok') {
                         fetch_users();
-                        alert("Xóa thành công");
                     } else {
                         alert(data);
                     }

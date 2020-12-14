@@ -5,11 +5,12 @@ $query = "SELECT * FROM users WHERE Id = '$id'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 $respone = array(
-    "id"=>$id,
+    "id"=> $id,
     "username" => $row['Username'],
     "email" => $row["Email"],
     "fullname" => $row['Fullname'],
-    "type" => $row['Type']
+    "type" => $row['Type'],
+    "image" => $row['Image']
 );
 echo json_encode($respone);
 

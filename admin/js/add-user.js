@@ -30,10 +30,14 @@ $(document).ready(function() {
                     }
                     // If username and email are not exist
                     if (data[0] != '0' && data[1] != '0') {
+                        data = new FormData(document.getElementById("add-form"));
+                        console.log(data);
                         $.ajax({
                             url: 'controller/insert-user.php',
                             method: 'post',
-                            data: $("#add-form").serialize(),
+                            data: data,
+                            contentType: false,
+                            processData: false,
                             dataType: 'html',
                             beforeSend: function() {
                                 $("#add").attr('disabled', 'disabled');
@@ -41,7 +45,7 @@ $(document).ready(function() {
                             success: function(data) {
                                 $("#respone-status").html(data);
                                 $("#add").attr('disabled', false);
-                                $("#add-form")[0].reset();
+                                // $("#add-form")[0].reset();
                                 resetAllInput();
                             }
                         });
@@ -58,6 +62,7 @@ $(document).ready(function() {
         let passwordValue = password.value.trim();
         let password2Value = password2.value.trim();
         let mailformat = /[a-zA-Z0-9]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+/;
+        let extension = $('#image').val().split('.').pop().toLowerCase();
         let isValid = true;
 
         if (usernameValue.length < 6 || usernameValue.length > 50) {
@@ -93,6 +98,16 @@ $(document).ready(function() {
         } else {
             setSuccessFor(password2);
         }
+
+        if (extension != '') {
+            if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+                $("#image-status").css('visibility', 'visible');
+                isValid = false;
+            } else {
+                $("#image-status").css('visibility', 'hidden');
+            }
+        }
+
         return isValid;
     }
 

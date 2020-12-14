@@ -9,6 +9,7 @@ $fullname = $_POST['fullname'];
 $type = $_POST['type'];
 $error = false;
 $emailformat = "/[a-zA-Z0-9]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+/";
+$destination = $image_name = "";
 
 if ($username == "" or strlen($username) < 6 or strlen($username) > 50) {
     $error = true;
@@ -21,6 +22,24 @@ if ($password == "" or strlen($password) < 6 or strlen($password) > 50) {
 }
 if ($password2 != $password) {
     $error = true;
+}
+if (isset($_FILES["image"]['name'])) {
+    $path = $_FILES['image']['name'];
+    if ($path != "") {
+        $extension = pathinfo($path, PATHINFO_EXTENSION);
+        $valid_extensions = array("jpg", "jpeg", "png", "gif");
+        /* Check file extension */
+        if (in_array(strtolower($extension), $valid_extensions)) {
+            /* Upload file */
+            $image_name = $username . '_avatar' . '.' . $extension;
+            $destination = '../../users/images/user-avatar/' . $image_name;
+            move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+        } else {
+            $error = true;
+        }        
+    }
+
+   
 }
 
 // Check whether username already taken
@@ -39,7 +58,7 @@ if (mysqli_num_rows($result1) > 0) {
 
 // Insert account to users table
 if ($error == false) {
-    $query2 = "INSERT INTO users (Username, Password, Email, Fullname, Type) VALUES ('$username','$password','$email', '$fullname', '$type' )";
+    $query2 = "INSERT INTO users (Username, Password, Email, Fullname, Type, Image) VALUES ('$username','$password','$email', '$fullname', '$type', '$image_name' )";
     $result2 = mysqli_query($con, $query2);
     echo "<span style='color:green;'>" . "Thêm thành công." . "</span>";
 } else {

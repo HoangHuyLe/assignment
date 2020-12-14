@@ -68,7 +68,6 @@
                         <input type="text" placeholder="Lê Hoàng Huy" id="fullname" name="fullname" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
-                        <small>Thông báo lỗi</small>
                     </div>
                     <div class="form-control-custom">
                         <label>Loại thành viên</label><br>
@@ -80,11 +79,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-6">
+                    <div class="form-control-custom">
+                        <label>Ảnh đại diện</label><br>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="image" id="image">
+                            <label class="custom-file-label" for="image">Chọn ảnh</label>
+                        </div>
+                        <small id="image-status">Tệp ảnh phải có đuôi là gif, png, jpg, jpeg</small>
+                    </div>
+                </div>
                 <div class="col-12">
                     <button type='submit' name='add' id="add">Thêm thành viên</button>
                 </div>
-            </form>         
-
+            </form>
         </div>
     </div>
 
@@ -113,6 +121,12 @@
             });
             $(document).ajaxComplete(function() {
                 $("#wait").css("display", "none");
+            });
+
+            // The name of the file appear on select
+            $(".custom-file-input").on("change", function() {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).siblings(".custom-file-label").html(fileName);
             });
         });
     </script>
