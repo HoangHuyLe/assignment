@@ -41,36 +41,7 @@
 	<!-- END LOADER -->
 
 	<!-- ====== HEADER SECTION ====== -->
-	<header class="top-header">
-		<nav class="navbar header-nav navbar-expand-lg ">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html"><img src="images/ultraman_logo.png" alt="image"></a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd"
-					aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-				<div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-					<ul class="navbar-nav">
-						<li><a class="nav-link" href="index.html">Trang chủ</a></li>
-						<li><a class="nav-link" href="about.html">Giới thiệu</a></li>
-						<li><a class="nav-link" href="services.html">Dịch vụ</a></li>
-						<li><a class="nav-link" href="pricelist.html">Bảng giá</a></li>
-						<li><a class="nav-link" style="color: #f2184f" href="contact.html">Liên hệ</a></li>
-						<li><a class="nav-link" style="background:#f2184f;color:#fff;" href="#">Đăng nhập</a></li>
-					</ul>
-				</div>
-				<div class="search-box">
-					<input type="text" class="search-txt" placeholder="Search">
-					<a class="search-btn">
-						<img src="images/search_icon.png" alt="#" />
-					</a>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<!-- End header -->
+	<?php include("include/header.php") ?>
 
 	<!-- Start Banner -->
 	<div class="section inner_page_header">
@@ -88,9 +59,7 @@
 
 	<!-- Map -->
 	<div class="map">
-		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3295.715150387603!2d106.69761278518709!3d10.789247245392188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f35548ebbed%3A0x53800e03a8b9b2e!2zNjAgTmd1eeG7hW4gxJDDrG5oIENoaeG7g3UsIMSQYSBLYW8sIFF14bqtbiAxLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1606558644948!5m2!1svi!2s"
-			aria-hidden="false" tabindex="0">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3295.715150387603!2d106.69761278518709!3d10.789247245392188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f35548ebbed%3A0x53800e03a8b9b2e!2zNjAgTmd1eeG7hW4gxJDDrG5oIENoaeG7g3UsIMSQYSBLYW8sIFF14bqtbiAxLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1606558644948!5m2!1svi!2s" aria-hidden="false" tabindex="0">
 		</iframe>
 	</div>
 
@@ -110,29 +79,25 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" id="name" name="name"
-											placeholder="Tên" required data-error="Please enter your name">
+										<input type="text" class="form-control" id="name" name="name" placeholder="Tên" required data-error="Please enter your name">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" placeholder="Email" id="email" class="form-control"
-											name="name" required data-error="Please enter your email">
+										<input type="text" placeholder="Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="text" placeholder="Số điện thoại" id="number" class="form-control"
-											name="number" required data-error="Please enter your number">
+										<input type="text" placeholder="Số điện thoại" id="number" class="form-control" name="number" required data-error="Please enter your number">
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea class="form-control" id="message" placeholder="Tin nhắn của bạn" rows="8"
-											data-error="Write your message" required></textarea>
+										<textarea class="form-control" id="message" placeholder="Tin nhắn của bạn" rows="8" data-error="Write your message" required></textarea>
 										<div class="help-block with-errors"></div>
 									</div>
 									<div class="submit-button text-center">
@@ -187,74 +152,8 @@
 	</div>
 	<!-- end section -->
 
-
-
 	<!-- ====== FOOTER ====== -->
-	<footer id="footer">
-		<div class="footer-top">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-lg-3 col-md-6 footer-info">
-						<img src="images/ultraman_logo.png" alt="logo">
-						<p class="text-justify"> Ultraman là công ty thiết kế web chuyên nghiệp uy tín có trụ sở chính
-							tại Tp HCM. Chúng tôi
-							thiết kế web theo chuẩn SEO, chuẩn di động. Áp dụng những công nghệ tiên tiến nhất hiện nay
-							để thiết kế website như HTML5, CSS3, PHP, Asp.net. Nhằm mang lại sự hiệu quả thực sự cho
-							khách hàng</p>
-					</div>
-
-					<div class="col-lg-3 col-md-6 footer-links">
-						<h4>Links</h4>
-						<ul>
-							<li><i class="ion-ios-arrow-right"></i> <a href="#">Trang chủ</a></li>
-							<li><i class="ion-ios-arrow-right"></i> <a href="#">Giới thiệu</a></li>
-							<li><i class="ion-ios-arrow-right"></i> <a href="#">Dịch vụ</a></li>
-							<li><i class="ion-ios-arrow-right"></i> <a href="#">Bảng giá</a></li>
-							<li><i class="ion-ios-arrow-right"></i> <a href="#">Liên hệ</a></li>
-						</ul>
-					</div>
-
-					<div class="col-lg-3 col-md-6 footer-contact">
-						<h4>Liên hệ</h4>
-						<p>
-							<strong>Trụ sở chính: </strong> 60 Nguyễn Đình Chiểu, P.Đakao, Q.1, TPHCM <br>
-							<strong>Điện thoại:</strong> (+84) 358 121 719<br>
-							<strong>Email:</strong> info@ultraman.com<br>
-						</p>
-
-						<div class="social-links">
-							<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-							<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-							<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-							<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-							<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-						</div>
-
-					</div>
-
-					<div class="col-lg-3 col-md-6 footer-advice">
-						<h4>Yêu cầu tư vấn</h4>
-						<p> Điền thông tin số điện thoại hoặc email để nhận cuộc gọi, email từ chuyên viên tư vấn thiết
-							kế website</p>
-						<form>
-							<input type="email" name="email"><input type="submit" value="Gửi">
-						</form>
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="copyright">
-				&copy; Copyright <strong>Ultraman</strong>. All Rights Reserved
-			</div>
-			<div class="credits">
-				Designed by Ultraman Company
-			</div>
-		</div>
-	</footer><!-- #footer -->
+	<?php include("include/footer.php") ?>
 
 	<a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
@@ -270,7 +169,11 @@
 	<script src="js/isotope.min.js"></script>
 	<script src="js/images-loded.min.js"></script>
 	<script src="js/custom.js"></script>
-
+	<script>
+        $(document).ready(function(){
+            $("a#contact").css("color", "#f2184f");
+        })
+    </script>
 
 </body>
 

@@ -35,37 +35,7 @@
 <body id="services" class="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
     <!-- ====== HEADER SECTION ====== -->
-    <header class="top-header" style="position: absolute;">
-        <nav class="navbar header-nav navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="images/ultraman_logo.png" alt="image"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd"
-                    aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                    <ul class="navbar-nav">
-                        <li><a class="nav-link" href="index.html">Trang chủ</a></li>
-                        <li><a class="nav-link" href="about.html">Giới thiệu</a></li>
-                        <li><a class="nav-link" style="color:#f2184f;" href="services.html">Dịch vụ</a></li>
-                        <li><a class="nav-link" href="pricelist.html">Bảng giá</a></li>
-                        <li><a class="nav-link" href="contact.html">Liên hệ</a></li>
-                        <li><a class="nav-link" style="background:#f2184f;color:#fff;" href="#">Đăng nhập</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="search-box">
-                    <input type="text" class="search-txt" placeholder="Search">
-                    <a class="search-btn">
-                        <img src="images/search_icon.png" alt="#" />
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- End header -->
+    <?php include("include/header.php") ?>
 
     <!-- ====== BANNER SECTION ====== -->
     <div class="container-fluid banner">
@@ -101,8 +71,7 @@
     <div class="main-container mobile-nav nav-bkg-color d-block d-lg-none sticky-top">
         <div class="inside-container nav-contain">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-small"
-                    aria-controls="navbar-small" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-small" aria-controls="navbar-small" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -406,8 +375,7 @@
                 <div class="col-12 col-lg-6 service5-img text-center">
                     <img src="images/services_img/service5.png" class="img-fluid " alt="service5">
                 </div>
-                <div class="col-12 col-lg-6 service5-detail wow slideInRight" data-wow-duration="1s"
-                    data-wow-delay="0.5s">
+                <div class="col-12 col-lg-6 service5-detail wow slideInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                     <h2>CHIẾN DỊCH QUẢNG CÁO</h2>
                     <hr>
                     <p class="desc">Chiến dịch quảng cáo bám sát mục tiêu kinh doanh sẽ mang bạn đến gần khách hàng tiềm
@@ -496,74 +464,7 @@
     </div>
 
     <!-- ====== FOOTER ====== -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-info">
-                        <img src="images/ultraman_logo.png" alt="logo">
-                        <p class="text-justify"> Ultraman là công ty thiết kế web chuyên nghiệp uy tín có trụ sở
-                            chính
-                            tại Tp HCM. Chúng tôi
-                            thiết kế web theo chuẩn SEO, chuẩn di động. Áp dụng những công nghệ tiên tiến nhất hiện
-                            nay
-                            để thiết kế website như HTML5, CSS3, PHP, Asp.net. Nhằm mang lại sự hiệu quả thực sự cho
-                            khách hàng</p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Links</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Trang chủ</a></li>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Giới thiệu</a></li>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Dịch vụ</a></li>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Bảng giá</a></li>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Liên hệ</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h4>Liên hệ</h4>
-                        <p>
-                            <strong>Trụ sở chính: </strong> 60 Nguyễn Đình Chiểu, P.Đakao, Q.1, TPHCM <br>
-                            <strong>Điện thoại:</strong> (+84) 28. 38 12 17 19<br>
-                            <strong>Email:</strong> info@ultramn.com<br>
-                        </p>
-
-                        <div class="social-links">
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-advice">
-                        <h4>Yêu cầu tư vấn</h4>
-                        <p> Điền thông tin số điện thoại hoặc email để nhận cuộc gọi, email từ chuyên viên tư vấn
-                            thiết
-                            kế website</p>
-                        <form>
-                            <input type="email" name="email"><input type="submit" value="Gửi">
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong>Ultraman</strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by Ultraman Company
-            </div>
-        </div>
-    </footer><!-- #footer -->
+    <?php include("include/footer.php") ?>
 
     <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
@@ -579,7 +480,11 @@
     <script src="js/custom.js"></script>
     <script src="js/homepage/wow.min.js"></script>
     <script src="js/services/service.js"></script>
-
+    <script>
+        $(document).ready(function(){
+            $("a#services").css("color", "#f2184f");
+        })
+    </script>
 </body>
 
 </html>

@@ -52,56 +52,7 @@ session_start();
     <!-- END LOADER -->
 
     <!-- ====== HEADER SECTION ====== -->
-    <header class="top-header">
-        <nav class="navbar header-nav navbar-expand-lg ">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="images/ultraman_logo.png" alt="image"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                    <ul class="navbar-nav">
-                        <li><a class="nav-link" style="color: #f2184f" href="index.php">Trang chủ</a></li>
-                        <li><a class="nav-link" href="about.php">Giới thiệu</a></li>
-                        <li><a class="nav-link" href="services.html">Dịch vụ</a></li>
-                        <li><a class="nav-link" href="pricelist.html">Bảng giá</a></li>
-                        <li><a class="nav-link" href="contact.html">Liên hệ</a></li>
-                        <?php
-                        if (isset($_SESSION['logged']) and $_SESSION['logged'] == true) {
-                            echo "
-                                <div class='dropdown'>
-                                    <button class='btn dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"
-                                . '<i class="fa fa-user-circle mr-2" aria-hidden="true"></i>'
-                                . $_SESSION['username']
-                                . "</button>
-                                    <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-                                        <a class='dropdown-item' href='#'>Trang cá nhân</a>
-                                        <a class='dropdown-item' href='users/logout.php'>Đăng xuất</a>                                        
-                                    </div>
-                                </div>                                
-                                ";
-                        } else {
-                            echo "
-                                <li><a class='nav-link' style='background:#f2184f;color:#fff;' href='users/login.php'>Đăng nhập</a>
-                                </li>
-                                ";
-                        }
-                        ?>
-
-                    </ul>
-                </div>
-                <div class="search-box">
-                    <input type="text" class="search-txt" placeholder="Search">
-                    <a class="search-btn">
-                        <img src="images/search_icon.png" alt="#" />
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!-- End header -->
+    <?php include("include/header.php") ?>
 
     <!-- ====== BANNER SECTION ====== -->
     <div class="ulockd-home-slider">
@@ -817,73 +768,9 @@ session_start();
 
     <!--/.container-->
     <!-- end OUR TEAM -->
-
+    
     <!-- ====== FOOTER ====== -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-info">
-                        <img src="images/ultraman_logo.png" alt="logo">
-                        <p class="text-justify"> Ultraman là công ty thiết kế web chuyên nghiệp uy tín có trụ sở chính
-                            tại Tp HCM. Chúng tôi
-                            thiết kế web theo chuẩn SEO, chuẩn di động. Áp dụng những công nghệ tiên tiến nhất hiện nay
-                            để thiết kế website như HTML5, CSS3, PHP, Asp.net. Nhằm mang lại sự hiệu quả thực sự cho
-                            khách hàng</p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-links">
-                        <h4>Links</h4>
-                        <ul>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Trang chủ</a></li>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Giới thiệu</a></li>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Dịch vụ</a></li>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Bảng giá</a></li>
-                            <li><i class="ion-ios-arrow-right"></i> <a href="#">Liên hệ</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h4>Liên hệ</h4>
-                        <p>
-                            <strong>Trụ sở chính: </strong> 60 Nguyễn Đình Chiểu, P.Đakao, Q.1, TPHCM <br>
-                            <strong>Điện thoại:</strong> (+84) 358 12 17 19<br>
-                            <strong>Email:</strong> info@ultraman.com<br>
-                        </p>
-
-                        <div class="social-links">
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 footer-advice">
-                        <h4>Yêu cầu tư vấn</h4>
-                        <p> Điền thông tin số điện thoại hoặc email để nhận cuộc gọi, email từ chuyên viên tư vấn thiết
-                            kế website</p>
-                        <form>
-                            <input type="email" name="email"><input type="submit" value="Gửi">
-                        </form>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong>Ultraman</strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by Ultraman Company
-            </div>
-        </div>
-    </footer><!-- #footer -->
+    <?php include("include/footer.php") ?>
 
     <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
@@ -902,7 +789,11 @@ session_start();
     <script src="js/custom.js"></script>
     <script src="js/homepage/wow.min.js"></script>
     <script src="js/homepage/homepage.js"></script>
-
+    <script>
+        $(document).ready(function(){
+            $("a#home").css("color", "#f2184f");
+        })
+    </script>
 </body>
 
 </html>
