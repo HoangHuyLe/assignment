@@ -7,11 +7,10 @@
         <div class='dropdown'>
             <button class='btn btn-info dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                 <i class="fa fa-user-circle mr-1" aria-hidden="true"></i>
-                <span style="margin-right: 25px;">Admin</span>
+                <span style="margin-right: 25px;"><?php echo $_SESSION['username']?></span>
             </button>
-            <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-                <a class='dropdown-item' href='#'>Trang cá nhân</a>
-                <a class='dropdown-item' href='#'>Đăng xuất</a>
+            <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>                
+                <a class='dropdown-item' href='logout.php'>Đăng xuất</a>
             </div>
         </div>
     </div>

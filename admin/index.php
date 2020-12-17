@@ -8,7 +8,11 @@ if(isset($_POST['login'])){
     $query = "SELECT * FROM admin_tbl WHERE Username='$username' AND Password='$password' ";
     $result = mysqli_query($con, $query);    
     if(mysqli_num_rows($result) > 0){
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['userid'] = $row['Id'];
+        $_SESSION['username'] = $username;        
         header('Location: dashboard.php');
+        
     } else {
         $message = "Tài khoản hoặc mật khẩu không hợp lệ!";
     }    

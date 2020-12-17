@@ -42,7 +42,7 @@
             </ul>
         </li>
         <li>
-            <a href="#" ><i class="fa fa-pencil mr-3"></i>Thay đổi mật khẩu</a>
+            <a href="change-password.php" id="change-password"><i class="fa fa-pencil mr-3"></i>Thay đổi mật khẩu</a>
         </li>
     </ul>
 </nav>
