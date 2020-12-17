@@ -9,13 +9,13 @@
 ### Danh sách các tính năng thiết kế:
 Chú thích: (v) - đã hoàn thành
 #### 1. Khách 
-- Xem các thông tin public trên trang web (v) (huy)
-- Đăng ký (v) (huy)
-- Đăng nhập (v) (huy)
+- Xem các thông tin public trên trang web -- (v)(huy)
+- Đăng ký -- (v)(huy)
+- Đăng nhập -- (v)(huy)
 - Đăng nhập với Facebook, Google
 - Quên mật khẩu
-- Thực hiện kiểm tra dữ liệu đầu vào ở Clien side và Server side (v) (huy)
-#### 2. Thành viên
+- Thực hiện kiểm tra dữ liệu đầu vào ở Clien side và Server side -- (v)(huy)
+#### 2. Thành viên -- (đang làm)(Bảo)
 - Thiết kế giao diện trang cá nhân
 - Thay đổi thông tin cá nhân
 - Thay đổi mật khẩu
@@ -23,11 +23,13 @@ Chú thích: (v) - đã hoàn thành
 - Viết bình luận, đăng tin
 - Đặt yêu cầu gói dịch vụ
 #### 3. Quản trị viên
-- Thiết kế giao diện trang quản trị (v) (huy)
-- Quản lý thành viên: xem, thêm, sửa, xóa, tìm kiếm (v) (huy)
-- Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ...: (đang làm) (huy)
-    - Slider ở trang chủ: chọn ảnh đã từng uploaded, tải ảnh từ máy, xóa slider (v) (huy)
-- Hiện thực phân trang hiển thị cho các tính năng quản lý (đang làm) (huy)
+- Thiết kế giao diện trang quản trị -- (v)(huy)
+- Quản lý thành viên: xem, thêm, sửa, xóa, tìm kiếm -- (v)(huy)
+- Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ...: 
+    - Slider ở trang chủ: thay đổi slider bằng chọn ảnh đã từng uploaded hoặc tải ảnh từ máy; xóa slider -- (v) (huy)
+    - Thay đổi thông tin ở trang liên hệ -- (v)(huy)
+    - Thay đổi mật khẩu (v)(huy)
+- Hiện thực phân trang hiển thị cho các tính năng quản lý -- (v)(huy)
 #### 4. Tìm kiếm
 - Tính năng tìm kiếm tài nguyên đơn giản trên trang web
 #### 5. Tính năng khác
