@@ -1,3 +1,21 @@
+<?php
+session_start();
+include_once('include/dbconnect.php');
+$query = "SELECT * FROM page_tbl WHERE PageType='contact'";
+$result = mysqli_query($con, $query);
+$contact_infor = array();
+while ($row = mysqli_fetch_assoc($result)) {
+	$tem_array = array(
+		'pagedesc' => $row['PageDescription'],
+		'address' => $row['Address'],
+		'email' => $row['Email'],
+		'phone' => $row['Phone']
+	);
+	array_push($contact_infor, $tem_array);
+}
+mysqli_close($con);
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 <!-- Basic -->
@@ -69,6 +87,7 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<p class="title">Liên hệ với Ultraman</p>
+					<p> <?php echo $contact_infor[0]['pagedesc'] ?> </p>
 				</div>
 			</div>
 			<div class="row margin-top_30">
@@ -120,7 +139,7 @@
 							</div>
 							<div class="media-body dit-right">
 								<h4>Địa chỉ</h4>
-								<p>60 Nguyễn Đình Chiểu, P.Đakao, Q.1, TPHCM</p>
+								<p> <?php echo $contact_infor[0]['address'] ?> </p>
 							</div>
 						</div>
 						<div class="media cont-line">
@@ -129,8 +148,8 @@
 							</div>
 							<div class="media-body dit-right">
 								<h4>Email</h4>
-								<a href="#">info@ultraman.com</a><br>
-								<a href="#">info1@ultraman.com</a>
+								<a href="#"><?php echo $contact_infor[0]['email'] ?></a><br>
+								<a href="#"><?php echo $contact_infor[1]['email'] ?></a>
 							</div>
 						</div>
 						<div class="media cont-line">
@@ -139,8 +158,8 @@
 							</div>
 							<div class="media-body dit-right">
 								<h4>Số điện thoại</h4>
-								<a href="#">(+84) 358 121 719</a><br>
-								<a href="#">(+84) 358 121 711</a>
+								<a href="#"><?php echo $contact_infor[0]['phone'] ?></a><br>
+								<a href="#"><?php echo $contact_infor[1]['phone'] ?></a>
 							</div>
 						</div>
 					</div>
@@ -164,16 +183,15 @@
 	<script src="lib/bootstrap/bootstrap.min.js"></script>
 	<!-- ALL PLUGINS -->
 	<script src="js/contact/contact-form-script.js"></script>
-	<script src="js/contact/form-validator.min.js"></script>
 	<script src="js/smoothscroll.js"></script>
 	<script src="js/isotope.min.js"></script>
 	<script src="js/images-loded.min.js"></script>
 	<script src="js/custom.js"></script>
 	<script>
-        $(document).ready(function(){
-            $("a#contact").css("color", "#f2184f");
-        })
-    </script>
+		$(document).ready(function() {
+			$("a#contact").css("color", "#f2184f");
+		})
+	</script>
 
 </body>
 

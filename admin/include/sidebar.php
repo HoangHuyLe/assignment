@@ -28,21 +28,21 @@
                     <a href="page-home.php" id="page-home"><i class="fa fa-home mr-2"></i>Trang chủ</a>
                 </li>
                 <li>
-                    <a href="#" class="link"><i class="fa fa-building mr-2"></i>Giới thiệu</a>
+                    <a href="#" ><i class="fa fa-building mr-2"></i>Giới thiệu</a>
                 </li>
                 <li>
-                    <a href="#" class="link"><i class="fa fa-cogs mr-2"></i>Dịch vụ</a>
+                    <a href="#" ><i class="fa fa-cogs mr-2"></i>Dịch vụ</a>
                 </li>
                 <li>
-                    <a href="#" class="link"><i class="fa fa-money mr-2"></i>Bảng giá</a>
+                    <a href="#" ><i class="fa fa-money mr-2"></i>Bảng giá</a>
                 </li>
                 <li>
-                    <a href="#" class="link"><i class="fa fa-phone mr-2"></i>Liên hệ</a>
+                    <a href="page-contact.php" id="page-contact"><i class="fa fa-phone mr-2"></i>Liên hệ</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#" class="link"><i class="fa fa-pencil mr-3"></i>Thay đổi mật khẩu</a>
+            <a href="#" ><i class="fa fa-pencil mr-3"></i>Thay đổi mật khẩu</a>
         </li>
     </ul>
 </nav>
