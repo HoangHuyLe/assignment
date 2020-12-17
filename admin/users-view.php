@@ -95,7 +95,7 @@
                         <div class="form-group row">
                             <label class="col-3 col-form-label">Ảnh</label>
                             <div class="col-9">
-                                <img src="../users/images/user-avatar/hoanghuy4_avatar.jpg" width='100px' hight='100px' name='image-edit' id="image-edit" alt="avatar">
+                                <img src="" width='100px' hight='100px' name='image-edit' id="image-edit" alt="avatar">
                             </div>
                         </div>
                     </form>

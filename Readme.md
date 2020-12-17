@@ -25,7 +25,8 @@ Chú thích: (v) - đã hoàn thành
 #### 3. Quản trị viên
 - Thiết kế giao diện trang quản trị (v) (huy)
 - Quản lý thành viên: xem, thêm, sửa, xóa, tìm kiếm (v) (huy)
-- Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ... (đang làm) (huy)
+- Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ...: (đang làm) (huy)
+    - Slider ở trang chủ: chọn ảnh đã từng uploaded, tải ảnh từ máy, xóa slider (v) (huy)
 - Hiện thực phân trang hiển thị cho các tính năng quản lý (đang làm) (huy)
 #### 4. Tìm kiếm
 - Tính năng tìm kiếm tài nguyên đơn giản trên trang web

@@ -169,11 +169,24 @@ ul ul a {
 }
 
 
-/* ------ view-users.php STYLE ------*/
+/* ------ users-view.php STYLE ------*/
 
 #tbl-users button.btn {
     padding: 0 5px;
     margin-right: 5px;
+}
+
+
+/* ------ page-home.php STYLE ------*/
+
+#slider1-error,
+#slider2-error {
+    color: #e74c3c;
+    visibility: hidden;
+}
+
+.select {
+    border: 1px solid green;
 }
 
 

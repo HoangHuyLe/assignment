@@ -32,14 +32,12 @@ if (isset($_FILES["image"]['name'])) {
         if (in_array(strtolower($extension), $valid_extensions)) {
             /* Upload file */
             $image_name = $username . '_avatar' . '.' . $extension;
-            $destination = '../../users/images/user-avatar/' . $image_name;
+            $destination = '../../upload/user-avatar/' . $image_name;
             move_uploaded_file($_FILES['image']['tmp_name'], $destination);
         } else {
             $error = true;
         }        
-    }
-
-   
+    }  
 }
 
 // Check whether username already taken

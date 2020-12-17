@@ -12,20 +12,20 @@
             </a>
             <ul class="list-unstyled collapse" id="menu-users">
                 <li>
-                    <a href="view-users.php" id="view-users"><i class="fa fa-eye mr-2"></i> Xem thành viên</a>
+                    <a href="users-view.php" id="view-users"><i class="fa fa-eye mr-2"></i> Xem thành viên</a>
                 </li>
                 <li>
-                    <a href="add-user.php" id="add-user" class="link"><i class="fa fa-plus mr-2"></i> Thêm thành viên</a>
+                    <a href="user-add.php" id="add-user"><i class="fa fa-plus mr-2"></i> Thêm thành viên</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="#menu-pages" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                <i class="fa fa-book mr-3"> </i>Pages
+            <a href="#menu-pages" id="manage-pages" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fa fa-book mr-3"> </i>Web Pages
             </a>
             <ul class="list-unstyled collapse" id="menu-pages">
                 <li>
-                    <a href="#" class="link"><i class="fa fa-home mr-2"></i>Trang chủ</a>
+                    <a href="page-home.php" id="page-home"><i class="fa fa-home mr-2"></i>Trang chủ</a>
                 </li>
                 <li>
                     <a href="#" class="link"><i class="fa fa-building mr-2"></i>Giới thiệu</a>

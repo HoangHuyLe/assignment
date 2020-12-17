@@ -44,11 +44,11 @@ session_start();
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
     <!-- LOADER -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="loader">
             <img src="images/loader.gif" alt="#" />
         </div>
-    </div>
+    </div> -->
     <!-- END LOADER -->
 
     <!-- ====== HEADER SECTION ====== -->
@@ -59,7 +59,20 @@ session_start();
         <div class="container-fluid">
             <div class="row">
                 <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" style="background-image:url(images/banner/banner-img.png);">
+                    <?php
+                    include_once('include/dbconnect.php');
+                    $query_slider = "SELECT * FROM page_images_tbl WHERE Page='home'AND Type='slider'AND Number > 0 ORDER BY Number";
+                    $sliders = mysqli_query($con, $query_slider);                    
+                    $slider_array = array();
+                    if ($sliders) {
+                        while ($row = mysqli_fetch_assoc($sliders)) {
+                            array_push($slider_array, $row['Image']);
+                        }
+                    }                   
+                    mysqli_close($con)
+                    ?>
+
+                    <div class="pogoSlider-slide" style="background-image:url(upload/slider/<?php echo $slider_array[0] ?>);">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -75,9 +88,12 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <div class="pogoSlider-slide" style="background-image:url(images/banner/banner-img02.jpg);">
-
-                    </div>
+                    <?php 
+                        for($i=1; $i < count($slider_array); $i++){
+                            echo "<div class='pogoSlider-slide' style='background-image:url(images/banner/{$slider_array[$i]});'></div>";
+                        }
+                    ?>
+                    
                 </div>
                 <!-- .pogoSlider -->
             </div>
@@ -768,7 +784,7 @@ session_start();
 
     <!--/.container-->
     <!-- end OUR TEAM -->
-    
+
     <!-- ====== FOOTER ====== -->
     <?php include("include/footer.php") ?>
 
@@ -790,7 +806,7 @@ session_start();
     <script src="js/homepage/wow.min.js"></script>
     <script src="js/homepage/homepage.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $("a#home").css("color", "#f2184f");
         })
     </script>
