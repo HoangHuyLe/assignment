@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['userid'])){
+if (!isset($_SESSION['userid'])) {
     header("Location: index.php");
 }
 ?>
@@ -19,6 +19,10 @@ if(!isset($_SESSION['userid'])){
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
+
+
 </head>
 
 <body>
@@ -37,7 +41,7 @@ if(!isset($_SESSION['userid'])){
             </nav>
 
             <div class="card">
-                <h5 class="card-header"> Thay đổi slider ở Banner</h5>
+                <h5 class="card-header bg-info text-white"> Thay đổi slider ở Banner</h5>
                 <div class="card-body">
                     <div class="row d-flex align-items-center ml-0">
                         <select class="custom-select mr-2" style="width: 20%" id="slider-number">
@@ -63,7 +67,41 @@ if(!isset($_SESSION['userid'])){
                     </div>
                 </div>
             </div>
+
+            <div class="card mt-4">
+                <h5 class="card-header bg-info text-white"> Quản lý sản phẩm </h5>
+                <div class="card-body">
+                    <div class="row ml-0 mb-2">
+                        <div class="col-9 pl-0">
+                            <label>Số sản phẩm được show trên trang chủ: </label>
+                            <input type='text' style="width: 50px; text-align: right;">
+                        </div>
+                        <div class="col-3 d-flex justify-content-end">
+                            <button id="add-product" class="btn btn-info">Thêm sản phẩm</button>
+                        </div>
+
+                    </div>
+
+                    <table id="tbl-products" class="table table-bordered table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col" class='table-success'>STT</th>
+                                <th scope="col" class='table-success'>Tiêu đề</th>
+                                <th scope="col" class='table-success'>Ảnh</th>
+                                <th scope="col" class='table-success'>Link</th>
+                                <th scope="col" class='table-success' width="15%">Hoàn thành</th>
+                                <th scope="col" class='table-success' width="15%">Thao tác</th>
+                            </tr>
+                        <tbody id="tbl-users-data"></tbody>
+                        </thead>
+
+                    </table>
+                </div>
+            </div>
+
         </div>
+
+
     </div>
 
     <!-- Choose Image Modal -->
@@ -130,6 +168,58 @@ if(!isset($_SESSION['userid'])){
         </div>
     </div>
 
+    <!-- Add Product Modal -->
+    <div class="modal fade" id="add-product-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title">Thêm sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="add-product-form">
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Tiêu đề</label>
+                            <div class="col-9">
+                                <textarea class="form-control" rows='2' name="title" id="add-title"> </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Ảnh</label>
+                            <div class="col-9">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="add-product-image-upload" name="product-image">
+                                    <label class="custom-file-label">Chọn ảnh</label>
+                                </div>
+                                <div class="mt-3 d-flex justify-content-center">
+                                    <img id="add-product-image" class="img-fluid" alt="image" style="max-height : 200px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Link</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" name="link" id="add-link">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Hoàn thành</label>
+                            <div class="col-9">
+                                <input type="date" class="form-control" name="completedate" id='add-completedate'>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="add-product-button" class="btn btn-primary">Thêm</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- loading indicator -->
     <div id="wait">
@@ -141,14 +231,21 @@ if(!isset($_SESSION['userid'])){
     <script src="../lib/bootstrap/jquery.min.js"></script>
     <script src="../lib/bootstrap/popper.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/page-home.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {            
+        $(document).ready(function() {
             $('a#manage-pages').addClass('selected');
             $('a#manage-pages').attr('aria-expanded', 'true');
             $('#menu-pages').addClass('show');
             $('a#page-home').addClass('selected-1');
+        });
+
+        // The name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").html(fileName);
         });
     </script>
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['userid'])){
+if (!isset($_SESSION['userid'])) {
     header("Location: index.php");
 }
 ?>
@@ -75,7 +75,7 @@ if(!isset($_SESSION['userid'])){
     <script src="../lib/bootstrap/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {            
+        $(document).ready(function() {
             $('a#dashboard').addClass('selected');
         });
     </script>

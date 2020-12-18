@@ -14,6 +14,7 @@ $(document).ready(function() {
 
     function load_page_home_data() {
         load_slider(1);
+        load_products();
     }
 
     function load_slider(slider_number) {
@@ -35,6 +36,27 @@ $(document).ready(function() {
                     $('#slider-img').css('display', 'none');
                     $('#notfound-slider').css('display', 'block');
                 }
+            }
+        })
+    }
+
+    function load_products() {
+        $.ajax({
+            url: "controller/fetch-products.php",
+            method: "post",
+            dataType: 'json',
+            success: function(data) {
+                $('#tbl-products').DataTable({
+                    data: data,
+                    columns: [
+                        { data: 'ordernum' },
+                        { data: 'title' },
+                        { data: 'image' },
+                        { data: 'link' },
+                        { data: 'completedate' },
+                        { data: 'action' }
+                    ]
+                });
             }
         })
     }
@@ -102,7 +124,7 @@ $(document).ready(function() {
     $("#confirm").click(function() {
         let old_slider_id = $('#slider-id').val();
         let slider_number = $('#slider-number').val();
-        if (!validateImage()) {
+        if (!validateImage('#FileUpload')) {
             alert("File tải lên không hợp lệ");
         } else {
             var fd = new FormData();
@@ -126,8 +148,8 @@ $(document).ready(function() {
     })
 
     // Validate image
-    function validateImage() {
-        let ext = $('#FileUpload').val().split('.').pop().toLowerCase();
+    function validateImage(input_id) {
+        let ext = $(input_id).val().split('.').pop().toLowerCase();
         let valid_extensions = ['gif', 'png', 'jpg', 'jpeg'];
         let isValid = true;
         if (ext != "") {
@@ -154,8 +176,70 @@ $(document).ready(function() {
             method: "post",
             success: function(data) {
                 alert(data);
-                load_slider(slider_number);
+                $.ajax({
+                    url: "controller/fetch-products.php",
+                    method: "post",
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#tbl-products').ajax.reload({
+                            data: data
+                        });
+                    }
+                })
             }
         })
     })
+
+    // *****************************
+    // 4) Add product
+    // Show modal
+    $("#add-product").click(function() {
+        $("#add-product-modal").modal('show');
+        $("#add-product-image").css('display', 'none');
+    })
+
+    // Show uploaded product image
+    $("#add-product-image-upload").change(function(event) {
+        let image = document.getElementById('add-product-image');
+        image.src = URL.createObjectURL(event.target.files[0]);
+        image.style.display = 'block';
+    })
+
+    // Insert product to database
+    $("#add-product-button").click(function() {
+        let title = $("#add-title").val();
+        let link = $("#add-link").val();
+        let completedate = $("#add-completedate").val();
+        let image = $("#add-product-image-upload").val();
+        if (title == "" || link == "" || completedate == "" || image == "") {
+            alert("Vui lòng nhập đủ thông tin")
+        } else {
+            if (!validateImage("#add-product-image-upload")) {
+                alert("File ảnh không hợp lệ")
+            } else {
+                data = new FormData(document.getElementById("add-product-form"));
+                $.ajax({
+                    url: 'controller/insert-product.php',
+                    method: 'post',
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    dataType: 'text',
+                    beforeSend: function() {
+                        $("#add-product-button").attr('disabled', 'disabled');
+                    },
+                    success: function(data) {
+                        alert(data);
+                        $("#add-product-button").attr('disabled', false);
+                        $("#add-product-form")[0].reset();
+                        $(".custom-file-label").html("");
+                        let table = $('#tbl-products').DataTable();
+                        table.destroy();
+                        load_products();
+                    }
+                });
+            }
+        }
+    })
+
 });

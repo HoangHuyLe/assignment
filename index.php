@@ -60,7 +60,7 @@ include_once('include/dbconnect.php');
         <div class="container-fluid">
             <div class="row">
                 <div class="pogoSlider" id="js-main-slider">
-                    <?php                    
+                    <?php
                     $query_slider = "SELECT * FROM page_images_tbl WHERE Page='home'AND Type='slider'AND Number > 0 ORDER BY Number";
                     $sliders = mysqli_query($con, $query_slider);
                     $slider_array = array();
@@ -68,7 +68,7 @@ include_once('include/dbconnect.php');
                         while ($row = mysqli_fetch_assoc($sliders)) {
                             array_push($slider_array, $row['Image']);
                         }
-                    }                    
+                    }
                     ?>
 
                     <div class="pogoSlider-slide" style="background-image:url(upload/slider/<?php echo $slider_array[0] ?>);">
@@ -293,7 +293,7 @@ include_once('include/dbconnect.php');
                 <section id="portfolio" class="section-bg">
                     <div class="container">
                         <div class="row portfolio-container">
-                            <?php                            
+                            <?php
                             $query_product = "SELECT * FROM products ORDER BY CompleteDate DESC, Id DESC";
                             $products = mysqli_query($con, $query_product);
 
@@ -301,22 +301,22 @@ include_once('include/dbconnect.php');
                                 while ($product = mysqli_fetch_assoc($products)) {
                             ?>
 
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="upload/products/<?php echo $product['Image'] ?>" class="img-fluid" alt="product">
-                                        <a href="upload/products/<?php echo $product['Image'] ?>" data-lightbox="portfolio" data-title="Sản phẩm" class="link-preview" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="<?php echo $product['Link'] ?>" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-                                    <div class="portfolio-info">
-                                        <h4><a href="<?php echo $product['Link'] ?>" target="_blank">
-                                        <?php echo $product['Title'] ?>
-                                        </a></h4>
+                                    <div class="col-lg-4 col-md-6 portfolio-item filter-app wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
+                                        <div class="portfolio-wrap">
+                                            <figure>
+                                                <img src="upload/products/<?php echo $product['Image'] ?>" class="img-fluid" alt="product">
+                                                <a href="upload/products/<?php echo $product['Image'] ?>" data-lightbox="portfolio" data-title="Sản phẩm" class="link-preview" title="Xem trước"><i class="ion ion-eye"></i></a>
+                                                <a href="<?php echo $product['Link'] ?>" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
+                                            </figure>
+                                            <div class="portfolio-info">
+                                                <h4><a href="<?php echo $product['Link'] ?>" target="_blank">
+                                                        <?php echo $product['Title'] ?>
+                                                    </a></h4>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <?php                                   
+                            <?php
                                 }
                             }
                             mysqli_close($con)
@@ -335,7 +335,7 @@ include_once('include/dbconnect.php');
                                                 doanh số ấn tượng</a></h4>
                                     </div>
                                 </div>
-                            </div> --> 
+                            </div> -->
                         </div>
 
                     </div>
