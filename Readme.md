@@ -26,8 +26,8 @@ Chú thích: (v) - đã hoàn thành
 - Thiết kế giao diện trang quản trị -- (v)(huy)
 - Quản lý thành viên: xem, thêm, sửa, xóa, tìm kiếm -- (v)(huy)
 - Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ...: 
-    - Slider ở trang chủ: thay đổi slider bằng chọn ảnh đã từng uploaded hoặc tải ảnh từ máy; xóa slider -- (v) (huy)
-    - Thay đổi thông tin ở trang liên hệ -- (v)(huy)
+    - Slider ở trang chủ: xem slider; thêm slider; thay đổi slider bằng chọn ảnh đã từng uploaded hoặc tải ảnh từ máy; xóa slider -- (v) (huy)
+    - Xem và thay đổi thông tin ở trang liên hệ -- (v)(huy)
     - Thay đổi mật khẩu (v)(huy)
 - Hiện thực phân trang hiển thị cho các tính năng quản lý -- (v)(huy)
 #### 4. Tìm kiếm

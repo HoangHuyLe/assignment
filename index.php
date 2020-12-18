@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('include/dbconnect.php');
 ?>
 
 <!DOCTYPE html>
@@ -59,17 +60,15 @@ session_start();
         <div class="container-fluid">
             <div class="row">
                 <div class="pogoSlider" id="js-main-slider">
-                    <?php
-                    include_once('include/dbconnect.php');
+                    <?php                    
                     $query_slider = "SELECT * FROM page_images_tbl WHERE Page='home'AND Type='slider'AND Number > 0 ORDER BY Number";
-                    $sliders = mysqli_query($con, $query_slider);                    
+                    $sliders = mysqli_query($con, $query_slider);
                     $slider_array = array();
                     if ($sliders) {
                         while ($row = mysqli_fetch_assoc($sliders)) {
                             array_push($slider_array, $row['Image']);
                         }
-                    }                   
-                    mysqli_close($con)
+                    }                    
                     ?>
 
                     <div class="pogoSlider-slide" style="background-image:url(upload/slider/<?php echo $slider_array[0] ?>);">
@@ -88,12 +87,12 @@ session_start();
                             </div>
                         </div>
                     </div>
-                    <?php 
-                        for($i=1; $i < count($slider_array); $i++){
-                            echo "<div class='pogoSlider-slide' style='background-image:url(images/banner/{$slider_array[$i]});'></div>";
-                        }
+                    <?php
+                    for ($i = 1; $i < count($slider_array); $i++) {
+                        echo "<div class='pogoSlider-slide' style='background-image:url(images/banner/{$slider_array[$i]});'></div>";
+                    }
                     ?>
-                    
+
                 </div>
                 <!-- .pogoSlider -->
             </div>
@@ -284,7 +283,7 @@ session_start();
                                 <p class="small_tag">HỒ SƠ NĂNG LỰC</p>
                                 <h2><span class="theme_color">CHÚNG TÔI</span> ĐÃ LÀM ĐƯỢC NHỮNG GÌ TRONG MỘT
                                     NĂM QUA?</h2>
-                                <p class="large">Các dự án tiêu biểu</p>
+                                <p class="large">Các dự án gần đây của chúng tôi</p>
                             </div>
                         </div>
                     </div>
@@ -294,7 +293,37 @@ session_start();
                 <section id="portfolio" class="section-bg">
                     <div class="container">
                         <div class="row portfolio-container">
+                            <?php                            
+                            $query_product = "SELECT * FROM products ORDER BY CompleteDate DESC, Id DESC";
+                            $products = mysqli_query($con, $query_product);
+
+                            if ($products) {
+                                while ($product = mysqli_fetch_assoc($products)) {
+                            ?>
+
                             <div class="col-lg-4 col-md-6 portfolio-item filter-app wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
+                                <div class="portfolio-wrap">
+                                    <figure>
+                                        <img src="upload/products/<?php echo $product['Image'] ?>" class="img-fluid" alt="product">
+                                        <a href="upload/products/<?php echo $product['Image'] ?>" data-lightbox="portfolio" data-title="Sản phẩm" class="link-preview" title="Xem trước"><i class="ion ion-eye"></i></a>
+                                        <a href="<?php echo $product['Link'] ?>" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
+                                    </figure>
+                                    <div class="portfolio-info">
+                                        <h4><a href="<?php echo $product['Link'] ?>" target="_blank">
+                                        <?php echo $product['Title'] ?>
+                                        </a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <?php                                   
+                                }
+                            }
+                            mysqli_close($con)
+                            ?>
+
+
+                            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
                                 <div class="portfolio-wrap">
                                     <figure>
                                         <img src="images/portfolio/product_1.PNG" class="img-fluid" alt="">
@@ -306,126 +335,7 @@ session_start();
                                                 doanh số ấn tượng</a></h4>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-web wow slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="images/portfolio/product_2.PNG" class="img-fluid" alt="">
-                                        <a href="images/portfolio/product_2.PNG" class="link-preview" data-lightbox="portfolio" data-title="Sản phẩm 2" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="http://www.tokyodeli.com.vn/" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-
-                                    <div class="portfolio-info">
-                                        <h4><a href="http://www.tokyodeli.com.vn/" target="_blank">TOKYO DELI - Thiết kế
-                                                web thương hiệu</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow slideInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="images/portfolio/product_3.jpg" class="img-fluid" alt="">
-                                        <a href="images/portfolio/product_3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sản phẩm 3" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="http://www.masteri.com.vn/" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-
-                                    <div class="portfolio-info">
-                                        <h4><a href="http://www.masteri.com.vn/" target="_blank">MASTERI tỏa sáng trên
-                                                thị trường Bất động sản</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="images/portfolio/product_4.jpg" class="img-fluid" alt="product 4">
-                                        <a href="images/portfolio/product_4.jpg" target="_blank" class="link-preview" data-lightbox="portfolio" data-title="Sản phẩm 4" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="https://www.pvoil.com.vn/" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-
-                                    <div class="portfolio-info">
-                                        <h4><a href="https://www.pvoil.com.vn/" target="_blank">PVOIL - Tổng công ty Dầu
-                                                Việt Nam</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="images/portfolio/product_5.jpg" class="img-fluid" alt="product5">
-                                        <a href="images/portfolio/product_5.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sản phẩm 5" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="http://www.toshiba.com.vn/" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-
-                                    <div class="portfolio-info">
-                                        <h4><a href="http://www.toshiba.com.vn/" target="_blank">TOSHIBA - Thương hiệu hàng đầu về sản phẩm điện tử</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow slideInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="images/portfolio/product_6.jpg" class="img-fluid" alt="product6">
-                                        <a href="images/portfolio/product_6.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sản phẩm 6" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="https://dominos.vn/" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-
-                                    <div class="portfolio-info">
-                                        <h4><a href="https://dominos.vn/" target="_blank">DOMINO Pizza tăng doanh thu ấn
-                                                tượng qua việc thiết kế website</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="images/portfolio/product_7.jpg" class="img-fluid" alt="product7">
-                                        <a href="images/portfolio/product_7.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sản phẩm 7" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="https://www.datxanh.vn/" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-
-                                    <div class="portfolio-info">
-                                        <h4><a href="https://www.datxanh.vn/">ĐẤT XANH GROUP - Xây dựng niềm tin của
-                                                bạn</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="images/portfolio/product_8.jpg" class="img-fluid" alt="product8">
-                                        <a href="images/portfolio/product_8.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sản phẩm 8" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="https://acbleasing.com.vn/" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-
-                                    <div class="portfolio-info">
-                                        <h4><a href="https://acbleasing.com.vn/" target="_blank">Công ty TNHH MTV cho
-                                                thuê tài chính ngân hàng Á Châu</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 portfolio-item filter-card wow slideInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                                <div class="portfolio-wrap">
-                                    <figure>
-                                        <img src="images/portfolio/product_9.jpg" class="img-fluid" alt="product9">
-                                        <a href="images/portfolio/product_9.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sản phẩm 9" title="Xem trước"><i class="ion ion-eye"></i></a>
-                                        <a href="https://residential.cbrevietnam.com/" target="_blank" class="link-details" title="Xem chi tiết"><i class="ion ion-android-open"></i></a>
-                                    </figure>
-
-                                    <div class="portfolio-info">
-                                        <h4><a href="https://residential.cbrevietnam.com/" target="_blank">CBRE VIỆT NAM
-                                                - Làm website dịch vụ khu dân cư hiện đại</a></h4>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> --> 
                         </div>
 
                     </div>

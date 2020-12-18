@@ -77,20 +77,11 @@ if (!isset($_SESSION['userid'])) {
     <script src="../lib/bootstrap/jquery.min.js"></script>
     <script src="../lib/bootstrap/popper.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
     <script src="js/change-password.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#sidebarCollapse').on('click', function() {
-                $('#sidebar, #content').toggleClass('active');
-            });
-            $('a#change-password').addClass('selected');
-
-            $(document).ajaxStart(function() {
-                $("#wait").css("display", "block");
-            });
-            $(document).ajaxComplete(function() {
-                $("#wait").css("display", "none");
-            });
+        $(document).ready(function() {           
+            $('a#change-password').addClass('selected');            
         });
     </script>
 </body>
