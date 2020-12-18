@@ -15,6 +15,7 @@ $(document).ready(function() {
     function load_page_home_data() {
         load_slider(1);
         load_products();
+        load_num_products()
     }
 
     function load_slider(slider_number) {
@@ -57,6 +58,17 @@ $(document).ready(function() {
                         { data: 'action' }
                     ]
                 });
+            }
+        })
+    }
+
+    function load_num_products() {
+        $.ajax({
+            url: "controller/fetch-num-product.php",
+            method: "post",
+            dataType: 'text',
+            success: function(data) {
+                $('#num-product').val(data);
             }
         })
     }
@@ -297,4 +309,55 @@ $(document).ready(function() {
         }
     })
 
+
+    // *****************************
+    // 6) Delete product
+
+    $(document).on('click', 'button.delete', function() {
+        let id_delete = $(this).attr('id');
+        $('#delete-product-modal').modal('toggle');
+        $('#confirm-delete-product').on('click', function() {
+            $.ajax({
+                url: 'controller/delete-product.php',
+                method: 'post',
+                data: { 'id': id_delete },
+                dataType: 'text',
+                beforeSend: function() {
+                    $("#confirm-delete-product").attr('disabled', 'disabled');
+                },
+                success: function(data) {
+                    alert(data);
+                    let table = $('#tbl-products').DataTable();
+                    table.destroy();
+                    load_products();
+                    $("#confirm-delete-product").attr('disabled', false);
+                    $('#delete-product-modal').modal('toggle');
+                }
+            });
+        });
+    });
+
+    // *****************************
+    // 7) Update num-product
+
+    $("#update-num-product").click(function() {
+        let new_num = $('#num-product').val();;
+        if (parseInt(new_num) < 6 || parseInt(new_num) > 15) {
+            alert("Vui lòng nhập số trong khoảng 6-15")
+        } else {
+            $.ajax({
+                url: "controller/update-num-product.php",
+                data: 'new_num=' + new_num,
+                method: 'get',
+                dataType: 'text',
+                beforeSend: function() {
+                    $("#update-num-product").attr('disabled', 'disabled');
+                },
+                success: function(data) {
+                    alert(data);
+                    $("#update-num-product").attr('disabled', false);
+                }
+            })
+        }
+    })
 });

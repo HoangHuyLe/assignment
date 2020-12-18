@@ -21,7 +21,7 @@ if (!isset($_SESSION['userid'])) {
     <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css">  
-    
+
 </head>
 
 <body>
@@ -73,7 +73,8 @@ if (!isset($_SESSION['userid'])) {
                     <div class="row ml-0 mb-2">
                         <div class="col-9 pl-0">
                             <label>Số sản phẩm được show trên trang chủ: </label>
-                            <input type='text' style="width: 50px; text-align: right;">
+                            <input type='text' id="num-product" style="width: 50px; text-align: right;">
+                            <input type="button" id="update-num-product" class="btn btn-info" value="Gửi">
                         </div>
                         <div class="col-3 d-flex justify-content-end">
                             <button id="add-product" class="btn btn-info">Thêm sản phẩm</button>
@@ -266,6 +267,27 @@ if (!isset($_SESSION['userid'])) {
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="save-changes" class="btn btn-primary">Lưu</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Slider Modal -->
+    <div class="modal fade" id="delete-product-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered " role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title">Xóa sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có chắc chắn muốn xóa sản phẩm này?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="confirm-delete-product" class="btn btn-primary">Xác nhận</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
                 </div>
             </div>

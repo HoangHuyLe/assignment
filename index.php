@@ -294,13 +294,19 @@ include_once('include/dbconnect.php');
                     <div class="container">
                         <div class="row portfolio-container">
                             <?php
+                            $query_num_product = "SELECT NumProduct FROM page_tbl WHERE PageType='home'";
+                            $result = mysqli_query($con, $query_num_product);
+                            $num_product = mysqli_fetch_assoc($result)['NumProduct'];
                             $query_product = "SELECT * FROM products ORDER BY CompleteDate DESC, Id DESC";
                             $products = mysqli_query($con, $query_product);
+                            $count = 1;
 
                             if ($products) {
                                 while ($product = mysqli_fetch_assoc($products)) {
+                                    if($count++ > $num_product){
+                                        break;
+                                    } else {
                             ?>
-
                                     <div class="col-lg-4 col-md-6 portfolio-item filter-app wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
                                         <div class="portfolio-wrap">
                                             <figure>
@@ -315,8 +321,8 @@ include_once('include/dbconnect.php');
                                             </div>
                                         </div>
                                     </div>
-
                             <?php
+                                    }
                                 }
                             }
                             mysqli_close($con)
