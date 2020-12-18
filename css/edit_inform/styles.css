@@ -44,7 +44,7 @@ ul li a:hover {
 .messages .nav-user li a.is-active {
   color: #f18121;
 }
-.messages .nav-user li a.is-active.li01 {
+/* .messages .nav-user li a.is-active.li01 {
   background-image: url(../images/mess_icon01_act.png);
 }
 .messages .nav-user li a.is-active.li02 {
@@ -73,7 +73,7 @@ ul li a:hover {
 }
 .messages .nav-user li a.li05 {
   background-image: url(../images/mess_icon05.png);
-}
+} */
 
 .messages input[type="radio"] {
   position: absolute;
@@ -95,13 +95,13 @@ ul li a:hover {
   font-size: 16px;
 }
 .messages input[type="radio"] + label[class*="collection-"].collection-01 {
-  background-image: url(../images/coll-paypal.png);
+  /* background-image: url(../images/coll-paypal.png); */
 }
 .messages input[type="radio"] + label[class*="collection-"].collection-02 {
-  background-image: url(../images/coll-bank.png);
+  /* background-image: url(../images/coll-bank.png); */
 }
 .messages input[type="radio"] + label[class*="collection-"].collection-03 {
-  background-image: url(../images/coll-fpt.png);
+  /* background-image: url(../images/coll-fpt.png); */
 }
 .messages input[type="radio"] + label[class*="collection-"]::before {
   top: 10px;
@@ -298,10 +298,6 @@ ul li a:hover {
 .messages .form-coll .coll-group-01 {
   display: block;
 }
-.messages .user-main input[type="email"] {
-  border: 1px solid #e0e0e0;
-  background: #ebebeb;
-}
 .messages .user-main .user-title {
   margin-top: 20px;
 }
@@ -372,7 +368,7 @@ ul li a:hover {
   content: "";
   width: 30px;
   height: 30px;
-  background-image: url(../images/mess_textarea.png);
+  /* background-image: url(../images/mess_textarea.png); */
   top: 50px;
   right: 20px;
   border: none;
@@ -427,7 +423,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -440,20 +436,20 @@ input[type=number] {
 }
 
 .btn.btn-danger {
-    background-color: #f52f6a !important;
+  background-color: #f52f6a !important;
 }
 
 input.input {
-    width:500px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border-color: #cacece !important;
+  width: 500px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border-color: #cacece !important;
 }
 
 p.txt {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .image-avatar {
@@ -463,6 +459,4 @@ p.txt {
 }
 
 @media screen and (max-width: 500px) {
-
 }
-
