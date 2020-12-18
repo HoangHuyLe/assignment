@@ -112,24 +112,16 @@ if(!isset($_SESSION['userid'])){
     <script src="../lib/bootstrap/jquery.min.js"></script>
     <script src="../lib/bootstrap/popper.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
     <script src="js/add-user.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#sidebarCollapse').on('click', function() {
-                $('#sidebar, #content').toggleClass('active');
-            });
+           
             $('a#manage-users').addClass('selected');
             $('a#manage-users').attr('aria-expanded', 'true');
             $('#menu-users').addClass('show');
             $('a#add-user').addClass('selected-1');
-
-            $(document).ajaxStart(function() {
-                $("#wait").css("display", "block");
-            });
-            $(document).ajaxComplete(function() {
-                $("#wait").css("display", "none");
-            });
-
+           
             // The name of the file appear on select
             $(".custom-file-input").on("change", function() {
                 var fileName = $(this).val().split("\\").pop();

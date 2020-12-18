@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['userid'])){
+if (!isset($_SESSION['userid'])) {
     header("Location: index.php");
 }
 ?>
@@ -73,14 +73,9 @@ if(!isset($_SESSION['userid'])){
     <script src="../lib/bootstrap/jquery.min.js"></script>
     <script src="../lib/bootstrap/popper.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#sidebarCollapse').on('click', function() {
-                $('#sidebar, #content').toggleClass('active');
-                // Close all drop-down menu
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-            });
             $('a#dashboard').addClass('selected');
         });
     </script>

@@ -97,25 +97,14 @@ if(!isset($_SESSION['userid'])){
     <script src="../lib/bootstrap/jquery.min.js"></script>
     <script src="../lib/bootstrap/popper.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.min.js"></script>    
-    
+    <script src="js/custom.js"></script>
     <script src="js/page-contact.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('#sidebarCollapse').on('click', function() {
-                $('#sidebar, #content').toggleClass('active');
-            });
+        $(document).ready(function() {            
             $('a#manage-pages').addClass('selected');
             $('a#manage-pages').attr('aria-expanded', 'true');
             $('#menu-pages').addClass('show');
             $('a#page-contact').addClass('selected-1');
-
-            $(document).ajaxStart(function() {
-                $("#wait").css("display", "block");
-            });
-            $(document).ajaxComplete(function() {
-                $("#wait").css("display", "none");
-            });
-
         });
     </script>
 
