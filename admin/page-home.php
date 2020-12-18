@@ -17,12 +17,11 @@ if (!isset($_SESSION['userid'])) {
     <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!-- Datatable CSS -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
     <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
-
-
-
+    <link rel="stylesheet" href="css/style.css">  
+    
 </head>
 
 <body>
@@ -220,6 +219,58 @@ if (!isset($_SESSION['userid'])) {
         </div>
     </div>
 
+     <!-- Edit Product Modal -->
+     <div class="modal fade" id="edit-product-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title">Chỉnh sửa sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-product-form">
+                        <input type="hidden" name='id' id="id-edit">
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Tiêu đề</label>
+                            <div class="col-9">
+                                <textarea class="form-control" rows='2' name="title" id="edit-title"> </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Ảnh</label>
+                            <div class="col-9">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="edit-product-image-upload" name="product-image">
+                                    <label class="custom-file-label">Chọn ảnh</label>
+                                </div>
+                                <div class="mt-3 d-flex justify-content-center">
+                                    <img id="edit-product-image" class="img-fluid" alt="image" style="max-height : 200px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Link</label>
+                            <div class="col-9">
+                                <input type="text" class="form-control" name="link" id="edit-link">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-3 col-form-label">Hoàn thành</label>
+                            <div class="col-9">
+                                <input type="date" class="form-control" name="completedate" id='edit-completedate'>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="save-changes" class="btn btn-primary">Lưu</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- loading indicator -->
     <div id="wait">
@@ -231,7 +282,7 @@ if (!isset($_SESSION['userid'])) {
     <script src="../lib/bootstrap/jquery.min.js"></script>
     <script src="../lib/bootstrap/popper.min.js"></script>
     <script src="../lib/bootstrap/bootstrap.min.js"></script>
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/page-home.js"></script>
     <script type="text/javascript">

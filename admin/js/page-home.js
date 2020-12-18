@@ -217,7 +217,7 @@ $(document).ready(function() {
             if (!validateImage("#add-product-image-upload")) {
                 alert("File ảnh không hợp lệ")
             } else {
-                data = new FormData(document.getElementById("add-product-form"));
+                let data = new FormData(document.getElementById("add-product-form"));
                 $.ajax({
                     url: 'controller/insert-product.php',
                     method: 'post',
@@ -239,6 +239,61 @@ $(document).ready(function() {
                     }
                 });
             }
+        }
+    })
+
+
+    // *****************************
+    // 5) Edit product
+
+    // Show edit modal and display data in edit form 
+    $(document).on('click', 'button.edit', function() {
+        let id_edit = $(this).attr('id');
+        $.ajax({
+            url: 'controller/fetch-product.php',
+            method: 'get',
+            data: 'id=' + id_edit,
+            dataType: 'json',
+            success: function(data) {
+                $('#id-edit').val(data['id']);
+                $('#edit-title').val(data['title']);
+                let src = "../upload/products/" + data['image'];
+                $('#edit-product-image').attr('src', src);
+                $('#edit-link').val(data['link']);
+                $('#edit-completedate').val(data['completedate']);
+                $('#edit-product-modal').modal('show');
+            }
+        })
+    });
+
+    // Send ajax request to server
+    $("#save-changes").on('click', function() {
+        let id = $("#id-edit").val();
+        let title = $("#edit-title").val();
+        let link = $("#edit-link").val();
+        let completedate = $("#edit-completedate").val();
+        if (title == "" || link == "" || completedate == "") {
+            alert("Vui lòng nhập đủ thông tin");
+        } else {
+            let data = new FormData(document.getElementById("edit-product-form"));
+            $.ajax({
+                url: 'controller/update-product.php',
+                method: 'post',
+                data: data,
+                contentType: false,
+                processData: false,
+                dataType: 'text',
+                beforeSend: function() {
+                    $("#save-changes").attr('disabled', 'disabled');
+                },
+                success: function(data) {
+                    alert(data);
+                    $("#save-changes").attr('disabled', false);
+                    let table = $('#tbl-products').DataTable();
+                    table.destroy();
+                    load_products();
+                }
+            });
         }
     })
 

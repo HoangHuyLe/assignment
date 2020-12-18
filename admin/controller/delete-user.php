@@ -7,7 +7,7 @@ $result = mysqli_query($con, $query);
 $row = mysqli_fetch_array($result);
 $image_name = $row['Image'];
 if ($image_name != '') {
-    unlink("../../users/images/user-avatar/" . $image_name);
+    unlink("../../upload/user-avatar/" . $image_name);
 }
 $query = "DELETE FROM users WHERE Id='$id'";
 if (mysqli_query($con, $query)) {
