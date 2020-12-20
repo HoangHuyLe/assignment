@@ -91,8 +91,7 @@ if (!isset($_SESSION['userid'])) {
                                 <th scope="col" class='table-success'>Link</th>
                                 <th scope="col" class='table-success' width="15%">Hoàn thành</th>
                                 <th scope="col" class='table-success' width="15%">Thao tác</th>
-                            </tr>
-                        <tbody id="tbl-users-data"></tbody>
+                            </tr>                        
                         </thead>
 
                     </table>

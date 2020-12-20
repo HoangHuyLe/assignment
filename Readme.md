@@ -26,8 +26,13 @@ Chú thích: (v) - đã hoàn thành
 - Thiết kế giao diện trang quản trị -- (v)(huy)
 - Quản lý thành viên: xem, thêm, sửa, xóa, tìm kiếm -- (v)(huy)
 - Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ...: 
-    - Slider ở trang chủ: xem slider; thêm slider; thay đổi slider bằng chọn ảnh đã từng uploaded hoặc tải ảnh từ máy; xóa slider -- (v) (huy)
+    - Slider ở trang chủ: xem, thêm, thay đổi slider bằng chọn ảnh đã từng uploaded hoặc tải ảnh từ máy, xóa slider -- (v) (huy)
+    - Sản phẩm ở trang chủ: xem, thêm, sửa, xóa, tìm kiếm sản phẩm; thay đổi số lượng sản phẩm được hiển thị -- (v) (huy)
     - Xem và thay đổi thông tin ở trang liên hệ -- (v)(huy)
+    - Quản lý thông tin liên hệ từ khách hàng: -- (v) (huy)
+        - Hệ thống gửi mail xác nhận cho khách hàng
+        - Admin nhận thông báo về yêu cầu khách hàng gửi
+        - Admin xem bảng yêu cầu, xem chi tiết từng yêu cầu, cập nhật yêu cầu và xóa yêu cầu. 
     - Thay đổi mật khẩu (v)(huy)
 - Hiện thực phân trang hiển thị cho các tính năng quản lý -- (v)(huy)
 #### 4. Tìm kiếm
@@ -47,3 +52,7 @@ Chú thích: (v) - đã hoàn thành
 Tài khoản test:
 - User: Username - hoanghuy , Pass - 123456
 - Admin: Username - admin , Pass - admin
+---
+### Hướng dẫn config mail server để gửi nhận email
+- https://www.youtube.com/watch?v=9W644cyDyNM
+- https://www.youtube.com/watch?v=L5uCc8Hab-I

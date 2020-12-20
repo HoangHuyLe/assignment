@@ -42,7 +42,10 @@
             </ul>
         </li>
         <li>
-            <a href="change-password.php" id="change-password"><i class="fa fa-pencil mr-3"></i>Thay đổi mật khẩu</a>
+            <a href="manage-contact.php" id="manage-contact"><i class="fa fa-envelope mr-3"></i>Quản lý liên hệ</a>
         </li>
+        <li>
+            <a href="change-password.php" id="change-password"><i class="fa fa-pencil mr-3"></i>Thay đổi mật khẩu</a>
+        </li>        
     </ul>
 </nav>
