@@ -51,11 +51,11 @@ mysqli_close($con);
 <body id="contact" class="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
 	<!-- LOADER -->
-	<div id="preloader">
+	<!-- <div id="preloader">
 		<div class="loader">
 			<img src="images/loader.gif" alt="#" />
 		</div>
-	</div>
+	</div> -->
 	<!-- END LOADER -->
 
 	<!-- ====== HEADER SECTION ====== -->
@@ -96,32 +96,38 @@ mysqli_close($con);
 					<div class="contact-block">
 						<form id="contactForm">
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<div class="form-group">
-										<input type="text" class="form-control" id="name" name="name" placeholder="Tên" required data-error="Please enter your name">
+										<input type="text" class="form-control" id="name" name="name" placeholder="Tên " required>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" placeholder="Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+										<input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" id="number" name="number" placeholder="SĐT" required>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="text" placeholder="Số điện thoại" id="number" class="form-control" name="number" required data-error="Please enter your number">
+										<input type="text" class="form-control" id="msg_subject" name="msg_subject" placeholder="Chủ đề" required>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea class="form-control" id="message" placeholder="Tin nhắn của bạn" rows="8" data-error="Write your message" required></textarea>
+										<textarea class="form-control" id="message" name="message" placeholder="Tin nhắn của bạn" rows="8" required></textarea>
 										<div class="help-block with-errors"></div>
 									</div>
 									<div class="submit-button text-center">
 										<button class="btn btn-common" id="submit" type="submit">Gửi tin nhắn</button>
-										<div id="msgSubmit" class="h3 text-center hidden"></div>
+										<div id="msgSubmit" class="hidden"></div>
 										<div class="clearfix"></div>
 									</div>
 								</div>
@@ -171,6 +177,11 @@ mysqli_close($con);
 	</div>
 	<!-- end section -->
 
+	<!-- loading indicator -->
+	<div id="wait">
+		<img src='images/ajax-loader.gif' alt="loader">
+	</div>
+
 	<!-- ====== FOOTER ====== -->
 	<?php include("include/footer.php") ?>
 
@@ -181,16 +192,26 @@ mysqli_close($con);
 	<script src="lib/bootstrap/jquery.min.js"></script>
 	<script src="lib/bootstrap/popper.min.js"></script>
 	<script src="lib/bootstrap/bootstrap.min.js"></script>
-	<!-- ALL PLUGINS -->
-	<script src="js/contact/contact-form-script.js"></script>
+	<!-- ALL PLUGINS -->	
 	<script src="js/smoothscroll.js"></script>
 	<script src="js/isotope.min.js"></script>
 	<script src="js/images-loded.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/contact/contact-form-script.js"></script>
 	<script>
 		$(document).ready(function() {
 			$("a#contact").css("color", "#f2184f");
+			/* ..............................................
+			Ajax indicator
+			................................................. */
+			$(document).ajaxStart(function() {
+				$("#wait").css("display", "block");
+			});
+			$(document).ajaxComplete(function() {
+				$("#wait").css("display", "none");
+			});
 		})
+		
 	</script>
 
 </body>

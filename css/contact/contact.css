@@ -15,10 +15,17 @@
     font-size: 40px;
 }
 
-.form-control {
-    color: white;
-}
-
 #contactForm {
     font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* ------ ajax indicator ------- */
+
+#wait {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1060;
 }

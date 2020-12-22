@@ -1,42 +1,58 @@
 $("#contactForm").on("submit", function(event) {
-    if (event.isDefaultPrevented()) {
-        // handle the invalid form...
-        formError();
-        submitMSG(false, "Did you fill in the form properly?");
-    } else {
-        // everything looks good!
-        event.preventDefault();
-        submitForm();
+    event.preventDefault();
+    $("#msgSubmit").removeClass().addClass("hidden");
+    if (validateForm()) {
+        $.ajax({
+            type: "POST",
+            url: "controller/contactform-process.php",
+            data: $("#contactForm").serialize(),
+            beforeSend: function() {
+                $("#submit").attr('disabled', 'disabled');
+            },
+            success: function(msg) {
+                if (msg == "success") {
+                    formSuccess();
+                } else {
+                    formError();
+                    submitMSG(false, msg);
+                }
+                $("#submit").attr('disabled', false);
+            }
+        });
     }
+
 });
 
-
-function submitForm() {
+// Validate input information
+// - All fields: not empty
+// - Email: <sth>@<sth>.<sth>
+// - Number: string number length 10 character
+function validateForm() {
     // Initiate Variables With Form Content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var msg_subject = $("#msg_subject").val();
-    var message = $("#message").val();
+    let email = $("#email").val();
+    let number = $("#number").val();
+    let mailformat = /[a-zA-Z0-9]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+/;
+    let numberformat = /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/;
 
+    if (!mailformat.test(email)) {
+        formError();
+        submitMSG(false, "Email chưa hợp lệ");
+        return false;
+    }
 
-    $.ajax({
-        type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
-        success: function(text) {
-            if (text == "success") {
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false, text);
-            }
-        }
-    });
+    if (!numberformat.test(number)) {
+        formError();
+        submitMSG(false, "Số điện thoại chưa hợp lệ");
+        return false;
+    }
+
+    return true;
+
 }
 
 function formSuccess() {
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Gửi thành công! Vui lòng kiểm tra email của bạn!")
 }
 
 function formError() {
@@ -47,9 +63,9 @@ function formError() {
 
 function submitMSG(valid, msg) {
     if (valid) {
-        var msgClasses = "h3 text-center tada animated text-success";
+        var msgClasses = "h5 mt-3 text-center tada animated text-success";
     } else {
-        var msgClasses = "h3 text-center text-danger";
+        var msgClasses = "h5 mt-3 text-center text-danger";
     }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
