@@ -44,8 +44,8 @@
                 </ul>
             </div>
             <div class="search-box">
-                <input type="text" class="search-txt" placeholder="Search">
-                <a class="search-btn">
+                <input type="text" class="search-txt" placeholder="Tìm kiếm sản phẩm" id="key">
+                <a class="search-btn" href="javascript:;" onclick = "this.href='search-result.php?keysearch=' + document.getElementById('key').value">
                     <img src="images/search_icon.png" alt="#" />
                 </a>
             </div>

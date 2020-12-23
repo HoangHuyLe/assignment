@@ -77,7 +77,7 @@ session_start();
                                 <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Bảo hành trọn đời
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-block btn-danger text-uppercase">Mua ngay</a>
+                            <a href="contact.php" class="btn btn-block btn-danger text-uppercase">Mua ngay</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ session_start();
                                 <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Bảo hành trọn đời
                                 </li>
                             </ul>
-                            <a href="#" class="btn btn-block btn-danger text-uppercase">Mua ngay</a>
+                            <a href="contact.php" class="btn btn-block btn-danger text-uppercase">Mua ngay</a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ session_start();
                                 <li><span class="fa-li"><i class="fa fa-check"></i></span>Tặng gói hỗ trợ ưu tiên</li>
                                 <li><span class="fa-li"><i class="fa fa-check"></i></span>Bảo hành trọn đời</li>
                             </ul>
-                            <a href="#" class="btn btn-block btn-danger text-uppercase">Mua ngay</a>
+                            <a href="contact.php" class="btn btn-block btn-danger text-uppercase">Mua ngay</a>
                         </div>
                     </div>
                 </div>
