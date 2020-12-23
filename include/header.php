@@ -15,24 +15,29 @@
                     <li><a class="nav-link" href="pricelist.php" id="pricelist">Bảng giá</a></li>
                     <li><a class="nav-link" href="contact.php" id="contact">Liên hệ</a></li>
                     <?php
-                    if (isset($_SESSION['logged']) and $_SESSION['logged'] == true) {
-                        echo "
-                                <div class='dropdown'>
-                                    <button class='btn dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"
-                            . '<i class="fa fa-user-circle mr-2" aria-hidden="true"></i>'
+                    if (isset($_SESSION['username']) and !empty($_SESSION['username'])) {
+                        if(isset($_SESSION['userimage'])){
+                            $avatar = '<img src="'.$_SESSION["userimage"].'" class="img-thumbnail mr-2" style="height: 30px;"  />';
+                        } else {
+                            $avatar = '<i class="fa fa-user-circle mr-2"></i>';
+                        }
+                        echo 
+                        " <div class='dropdown'>
+                            <button class='btn dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"
+                            . $avatar
                             . $_SESSION['username']
                             . "</button>
-                                    <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-                                        <a class='dropdown-item' href='edit_information.php'>Trang cá nhân</a>
-                                        <a class='dropdown-item' href='users/logout.php'>Đăng xuất</a>                                        
-                                    </div>
-                                </div>                                
-                                ";
+                            <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+                                <a class='dropdown-item' href='edit_information.php'>Trang cá nhân</a>
+                                <a class='dropdown-item' href='users/logout.php'>Đăng xuất</a>                                        
+                            </div>       
+                        </div>                                
+                        ";
                     } else {
-                        echo "
-                                <li><a class='nav-link' style='background:#f2184f;color:#fff;' href='users/login.php'>Đăng nhập</a>
-                                </li>
-                                ";
+                        echo 
+                        " <li><a class='nav-link' style='background:#f2184f;color:#fff;' href='users/login.php'>Đăng nhập</a>
+                            </li>
+                        ";
                     }
                     ?>
 

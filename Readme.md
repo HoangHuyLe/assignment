@@ -56,3 +56,8 @@ Tài khoản test:
 ### Hướng dẫn config mail server để gửi nhận email
 - https://www.youtube.com/watch?v=9W644cyDyNM
 - https://www.youtube.com/watch?v=L5uCc8Hab-I
+---
+### Nguồn tham khảo đăng nhập bằng Facebook và Google
+- https://www.webslesson.info/2019/10/how-to-implement-login-using-facebook-account-in-php.html
+- https://www.webslesson.info/2019/09/how-to-make-login-with-google-account-using-php.html
+- https://www.9lessons.info/2012/10/login-with-facebook-and-google.html (xử lý xung đột $_GET['code'] của FB và GG)

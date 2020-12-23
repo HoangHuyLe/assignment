@@ -1398,3 +1398,8 @@ ul.bottom_menu li {
 .top-header.fixed-menu ul li:focus a {
     color: #0892fd !important;
 }
+
+.dropdown .btn {
+    background-color: #f2184f;
+    color: #fff;
+}

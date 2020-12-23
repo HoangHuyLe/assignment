@@ -9,8 +9,8 @@ if(isset($_POST['login'])){
     $result = mysqli_query($con, $query);    
     if(mysqli_num_rows($result) > 0){
         $row = mysqli_fetch_assoc($result);
-        $_SESSION['userid'] = $row['Id'];
-        $_SESSION['username'] = $username;        
+        $_SESSION['adminid'] = $row['Id'];
+        $_SESSION['adminname'] = $username;        
         header('Location: dashboard.php');
         
     } else {

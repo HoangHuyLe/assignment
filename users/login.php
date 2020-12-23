@@ -2,23 +2,21 @@
 session_start();
 include("include/dbconnect.php");
 
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     $username = $_POST['username'];
-    $password = $_POST['password'];  
+    $password = $_POST['password'];
     $query = "SELECT * FROM users WHERE Username='$username' AND Password='$password' ";
     $result = mysqli_query($con, $query);
-    if(!$result){
+    if (!$result) {
         die("Invalid query: " . mysqli_error($con));
-    }       
-    if(mysqli_num_rows($result) == 1){
+    }
+    if (mysqli_num_rows($result) == 1) {
         $account = mysqli_fetch_array($result);
         $_SESSION['username'] = $username;
-        $_SESSION['id'] = $account['Id'];
-        $_SESSION['logged'] = true;
+        $_SESSION['uid'] = $account['Id'];
         header('Location: ../index.php');
         exit;
-    }
-    else {
+    } else {
         echo "<script type='text/javascript'>alert('Tài khoản hoặc mật khẩu không hợp lệ!');</script>";;
     }
 }
@@ -58,13 +56,13 @@ if(isset($_POST['submit'])){
                     <div class="col-12 col-lg-6">
                         <button type="button" class="facebook">
                             <i class="fa fa-facebook mr-2"></i>
-                            Đăng nhập qua Facebook
+                            <a href="./facebook_login.php" > Đăng nhập qua Facebook </a>
                         </button>
                     </div>
                     <div class="col-12 col-lg-6">
                         <button type="button" class="google">
                             <i class="fa fa-google mr-2"></i>
-                            Đăng nhập qua Google
+                            <a href="./google_login.php" > Đăng nhập qua Google </a>
                         </button>
                     </div>
                 </div>
@@ -77,13 +75,11 @@ if(isset($_POST['submit'])){
                     <form class="w-100" method="post">
                         <div class="form-group">
                             <label for="username">Tên tài khoản </label>
-                            <input type="username" class="form-control" name="username" id="username"
-                                placeholder="Nhập tên tài khoản">
+                            <input type="username" class="form-control" name="username" id="username" placeholder="Nhập tên tài khoản">
                         </div>
                         <div class="form-group">
                             <label for="password">Mật khẩu</label>
-                            <input type="password" class="form-control" name="password" id="password"
-                                placeholder="Nhập mật khẩu">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Nhập mật khẩu">
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary w-100"><i class="fa fa-lock"></i> Đăng nhập</button>
                     </form>

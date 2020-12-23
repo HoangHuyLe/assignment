@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['userid'])) {
+if (!isset($_SESSION['adminid'])) {
     header("Location: index.php");
 }
 ?>
@@ -39,10 +39,10 @@ if (!isset($_SESSION['userid'])) {
                     <div class="row">
                         <div class="col-12 col-md-6">
                             <form id="change-password-form">
-                                <input type="hidden" id="userid" value="<?php echo $_SESSION['userid'] ?>">
+                                <input type="hidden" id="userid" value="<?php echo $_SESSION['adminid'] ?>">
                                 <div class="form-group">
                                     <label>Tên tài khoản</label>
-                                    <input id="username" name="username" type='text' class="form-control" value="<?php echo $_SESSION['username'] ?>" disabled>
+                                    <input id="username" name="username" type='text' class="form-control" value="<?php echo $_SESSION['adminname'] ?>" disabled>
                                 </div>
                                 <div class="form-group">
                                     <label>Mật khẩu cũ</label>

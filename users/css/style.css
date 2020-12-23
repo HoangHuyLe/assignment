@@ -1,9 +1,8 @@
-.login-bg{
+.login-bg {
     width: 95%;
     border-right: 1px solid rgb(224, 221, 221);
     padding-right: 2rem;
 }
-
 
 .facebook {
     background-color: #4267b2;
@@ -44,7 +43,17 @@
     bottom: 0;
     width: 100%;
     background: #111;
-    color: #fff; 
-    text-align: center;  
-    padding: 5px 0px; 
+    color: #fff;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button a:hover {
+    color: #fff;
+    text-decoration: none;
 }

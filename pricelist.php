@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 <!-- Basic -->
@@ -91,7 +95,7 @@
                                 </li>
                                 <li><span class="fa-li"><i class="fa fa-check"></i></span>Ngôn ngữ Việt + Anh</li>
                                 <li><span class="fa-li"><i class="fa fa-check"></i></span>24/7 Hỗ trợ trực tuyến</li>
-                                <li><span class="fa-li"><i class="fa fa-times"></i></span>Backup hằng ngày</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>Backup hằng ngày</li>
                                 <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Tặng gói hỗ trợ ưu tiên
                                 </li>
                                 <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Bảo hành trọn đời
@@ -115,9 +119,9 @@
                                 </li>
                                 <li><span class="fa-li"><i class="fa fa-check"></i></span>Ngôn ngữ Việt + Anh</li>
                                 <li><span class="fa-li"><i class="fa fa-check"></i></span>24/7 Hỗ trợ trực tuyến</li>
-                                <li><span class="fa-li"><i class="fa fa-times"></i></span>Backup hằng ngày</li>
-                                <li><span class="fa-li"><i class="fa fa-times"></i></span>Tặng gói hỗ trợ ưu tiên</li>
-                                <li><span class="fa-li"><i class="fa fa-times"></i></span>Bảo hành trọn đời</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>Backup hằng ngày</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>Tặng gói hỗ trợ ưu tiên</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>Bảo hành trọn đời</li>
                             </ul>
                             <a href="#" class="btn btn-block btn-danger text-uppercase">Mua ngay</a>
                         </div>

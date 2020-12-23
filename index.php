@@ -1,6 +1,15 @@
 <?php
 session_start();
 include_once('include/dbconnect.php');
+// Select user image
+if(isset($_SESSION['username'])){
+    $query = "SELECT * FROM users WHERE Username='{$_SESSION['username']}'";
+    $result = mysqli_query($con, $query);
+    $row = mysqli_fetch_array($result);
+    if(!empty($row['Image'])){
+        $_SESSION['userimage'] = "upload/user-avatar/" .$row['Image'];
+    }
+} 
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +98,7 @@ include_once('include/dbconnect.php');
                     </div>
                     <?php
                     for ($i = 1; $i < count($slider_array); $i++) {
-                        echo "<div class='pogoSlider-slide' style='background-image:url(images/banner/{$slider_array[$i]});'></div>";
+                        echo "<div class='pogoSlider-slide' style='background-image:url(upload/slider/{$slider_array[$i]});'></div>";
                     }
                     ?>
 
