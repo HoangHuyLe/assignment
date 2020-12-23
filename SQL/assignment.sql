@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 20, 2020 lúc 06:55 PM
+-- Thời gian đã tạo: Th12 23, 2020 lúc 04:04 PM
 -- Phiên bản máy phục vụ: 10.4.17-MariaDB
 -- Phiên bản PHP: 8.0.0
 
@@ -57,15 +57,6 @@ CREATE TABLE `contacts` (
   `IsRead` int(11) NOT NULL,
   `IsContact` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `contacts`
---
-
-INSERT INTO `contacts` (`Id`, `Name`, `Email`, `Number`, `Subject`, `Message`, `PostingDate`, `IsRead`, `IsContact`) VALUES
-(23, 'aaaaaa', 'hoanghuyd6nc@gmail.com', '0359633778', '123', '12345', '2020-12-20 21:11:54', 0, 0),
-(24, 'vinfast', 'hoanghuyd6nc@gmail.com', '0359633882', 'Email về trang web moi can chinh sua', '123', '2020-12-20 21:43:05', 0, 1),
-(25, 'xedepne', '1511232@hcmut.edu.vn', '0359633778', 'Email về trang web', '12323', '2020-12-20 21:43:15', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -168,7 +159,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Id`, `Username`, `Password`, `Email`, `Fullname`, `Type`, `Image`) VALUES
-(1, 'hoanghuy', '123456', 'hoanghuyd6nc@gmail.com', 'Lê Hoàng Huy', 'normal', NULL),
+(1, 'hoanghuy', '12345678', 'hoanghuyd6nc@gmail.com', 'Lê Hoàng Huy', 'normal', NULL),
 (33, 'admin1', '123456', 'admin1@gmail.com', 'Hoang Huy', 'VIP', 'admin1_avatar.jpg'),
 (34, 'admin2', '123456', 'admin2@gmail.com', 'Hoang Huy', 'normal', 'admin2_avatar.jpg');
 
@@ -226,7 +217,7 @@ ALTER TABLE `admin_tbl`
 -- AUTO_INCREMENT cho bảng `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `page_images_tbl`

@@ -12,8 +12,8 @@ Chú thích: (v) - đã hoàn thành
 - Xem các thông tin public trên trang web -- (v)(huy)
 - Đăng ký -- (v)(huy)
 - Đăng nhập -- (v)(huy)
-- Đăng nhập với Facebook, Google
-- Quên mật khẩu
+- Đăng nhập với Facebook, Google --(v)(huy)
+- Reset mật khâu qua email  -- (v)(huy)
 - Thực hiện kiểm tra dữ liệu đầu vào ở Clien side và Server side -- (v)(huy)
 #### 2. Thành viên -- (đang làm)(Bảo)
 - Thiết kế giao diện trang cá nhân
@@ -36,7 +36,7 @@ Chú thích: (v) - đã hoàn thành
     - Thay đổi mật khẩu (v)(huy)
 - Hiện thực phân trang hiển thị cho các tính năng quản lý -- (v)(huy)
 #### 4. Tìm kiếm
-- Tính năng tìm kiếm tài nguyên đơn giản trên trang web
+- Tính năng tìm kiếm sản phẩm đơn giản -- (v)(huy)
 #### 5. Tính năng khác
 ---
 ### Hướng dẫn chạy Project
