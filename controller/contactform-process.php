@@ -31,7 +31,7 @@ if ($error) {
     // 1- Send email
     $EmailTo = $email;
     $Subject = "Ultraman Company xác nhận nhận thành công";
-    $Header = "From: hoanghuyle1709112312@gmail.com";
+    $Header = "From: hoanghuyle1709@gmail.com";
     // prepare email body text
     $Body = "Chào bạn " . $name . "!" . "\n";
     $Body .= "Bạn đã gửi cho Ultraman nhưng thông tin. \n";

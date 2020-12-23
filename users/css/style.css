@@ -57,3 +57,11 @@ button a:hover {
     color: #fff;
     text-decoration: none;
 }
+
+#wait {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    z-index: 1060;
+}

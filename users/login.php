@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 <!Doctype html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="utf-8">
@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
                     </form>
                 </div>
                 <div class="row mt-4">
-                    <p><a href="#">Quên mật khẩu?</a></p>
+                    <p><a href="reset-password.php">Quên mật khẩu?</a></p>
                     <div class="w-100"></div>
                     <p>Bạn không có tài khoản? <a href="registration.php">Đăng ký</a></p>
                 </div>
