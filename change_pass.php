@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<?php 
+    session_start();
+    include("include/header.php"); 
+?>
+
 <html lang="vi">
 <!-- Basic -->
 
@@ -57,10 +63,7 @@
 	<!-- END LOADER -->
 
 	<!-- ====== HEADER SECTION ====== -->
-  <?php 
-    session_start();
-    include("include/header.php"); 
-  ?>
+  
 	<!-- End header -->
 
   <?php
@@ -85,9 +88,9 @@
       <title>Sửa Thông Tin Cá Nhân</title>
       <section class="main-content" style="background-color: rgb(233, 233, 233);">
         <div class="container-fluid">
-          <div style="padding-right: 75px; padding-left: 75px;">
-            <div class="messages columns row">
-              <div class="column col-lg-4">
+          <div class="back-pad" style="padding-right: 75px; padding-left: 75px;">
+            <div class="messages columns row ad">
+              <div class="column col-md-4">
                 <ul class="nav-user">
                   <li>
                     <a class="li01 " href="edit_information.php">Quản lý tài khoản</a>
@@ -97,7 +100,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="column columns col-lg-8">
+              <div class="column columns col-md-8">
                 <form method="post" enctype="multipart/form-data" name="inform">
                   <div class="row">
                     <div class="user-main column col-lg-9">
@@ -215,6 +218,8 @@
         <?php
         
       }
+
+      mysqli_close($dbhandle);
     ?>
 
 	<!-- ====== FOOTER ====== -->
