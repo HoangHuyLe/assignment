@@ -41,21 +41,21 @@ if(!isset($_SESSION['adminid'])){
             <form id="add-form" class="form row">
                 <div class="col-6">
                     <div class="form-control-custom">
-                        <label>Tên tài khoản</label>
+                        <label>Tên tài khoản <span style="color: red"> *</span></label>
                         <input type="text" placeholder="hoanghuy123" id="username" name="username" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Thông báo lỗi</small>
                     </div>
                     <div class="form-control-custom">
-                        <label>Mật khẩu</label>
+                        <label>Mật khẩu <span style="color: red"> *</span></label>
                         <input type="password" placeholder="MatkhauDay" id="password" name="password" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Thông báo lỗi</small>
                     </div>
                     <div class="form-control-custom">
-                        <label>Xác nhận mật khẩu</label>
+                        <label>Xác nhận mật khẩu <span style="color: red"> *</span></label>
                         <input type="password" placeholder="MatKhauDay" id="password2" name="password2" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
@@ -64,7 +64,7 @@ if(!isset($_SESSION['adminid'])){
                 </div>
                 <div class="col-6">
                     <div class="form-control-custom">
-                        <label>Email</label>
+                        <label>Email <span style="color: red"> *</span></label>
                         <input type="email" placeholder="huy@gmail.com" id="email" name="email" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
