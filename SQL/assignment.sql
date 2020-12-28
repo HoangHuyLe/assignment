@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 23, 2020 lúc 04:04 PM
+-- Thời gian đã tạo: Th12 28, 2020 lúc 04:32 AM
 -- Phiên bản máy phục vụ: 10.4.17-MariaDB
 -- Phiên bản PHP: 8.0.0
 
@@ -58,6 +58,14 @@ CREATE TABLE `contacts` (
   `IsContact` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `contacts`
+--
+
+INSERT INTO `contacts` (`Id`, `Name`, `Email`, `Number`, `Subject`, `Message`, `PostingDate`, `IsRead`, `IsContact`) VALUES
+(28, 'aaaaaa', 'hoanghuyd6nc@gmail.com', '0359633778', 'Email về trang web', 'acb', '2020-12-28 09:59:36', 1, 0),
+(29, 'vinfast', 'abcdsc@gmail.com', '0359633778', '123', '123', '2020-12-28 10:00:34', 1, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -82,7 +90,8 @@ INSERT INTO `page_images_tbl` (`Id`, `Image`, `Page`, `Type`, `Number`) VALUES
 (3, 'About-us-banner.jpg', 'home', 'slider', 0),
 (4, 'banner3.jpg', 'home', 'slider', 0),
 (5, 'banner4.jpg', 'home', 'slider', 0),
-(8, 'slide1.jpg', 'home', 'slider', 0);
+(8, 'slide1.jpg', 'home', 'slider', 0),
+(9, 's4.jpg', 'home', 'slider', 0);
 
 -- --------------------------------------------------------
 
@@ -105,8 +114,8 @@ CREATE TABLE `page_tbl` (
 --
 
 INSERT INTO `page_tbl` (`Id`, `PageType`, `PageDescription`, `Address`, `Email`, `Phone`, `NumProduct`) VALUES
-(1, 'contact', 'Đội ngũ Ultraman luôn hoạt động 16h/24h. Để Ultraman có thể hỗ trợ bạn một cách nhanh chóng, vui lòng điền đầy đủ thông tin vào form dưới đây hoặc liên hệ qua email hoặc SĐT chúng tôi đã cung cấp bên dưới. Liên hệ ngay.', '60 Nguyễn Đình Chiểu, P.Đakao, Q.1, TPHCM', 'humanres@gmail.com', '(+84) 358 121 712', 0),
-(2, 'contact', 'Đội ngũ Ultraman luôn hoạt động 16h/24h. Để Ultraman có thể hỗ trợ bạn một cách nhanh chóng, vui lòng điền đầy đủ thông tin vào form dưới đây hoặc liên hệ qua email hoặc SĐT chúng tôi đã cung cấp bên dưới. Liên hệ ngay.', '60 Nguyễn Đình Chiểu, P.Đakao, Q.1, TPHCM', 'info1@ultraman.com', '(+84) 358 121 725', 0),
+(1, 'contact', 'Đội ngũ Ultraman luôn hoạt động 16h/24h. Để Ultraman có thể hỗ trợ bạn một cách nhanh chóng, vui lòng điền đầy đủ thông tin vào form dưới đây hoặc liên hệ qua email hoặc SĐT chúng tôi đã cung cấp bên dưới.', '60 Nguyễn Đình Chiểu, P.Đakao, Q.1, TPHCM', 'humanres@gmail.com', '(+84) 358 121 712', 0),
+(2, 'contact', 'Đội ngũ Ultraman luôn hoạt động 16h/24h. Để Ultraman có thể hỗ trợ bạn một cách nhanh chóng, vui lòng điền đầy đủ thông tin vào form dưới đây hoặc liên hệ qua email hoặc SĐT chúng tôi đã cung cấp bên dưới.', '60 Nguyễn Đình Chiểu, P.Đakao, Q.1, TPHCM', 'info1@ultraman.com', '(+84) 358 121 725', 0),
 (3, 'home', '', '', '', '', 10);
 
 -- --------------------------------------------------------
@@ -150,18 +159,10 @@ CREATE TABLE `users` (
   `Password` varchar(60) NOT NULL,
   `Email` varchar(60) NOT NULL,
   `Fullname` varchar(60) CHARACTER SET utf8 DEFAULT NULL,
+  `Tel` varchar(10) NOT NULL,
   `Type` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
   `Image` varchar(150) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Đang đổ dữ liệu cho bảng `users`
---
-
-INSERT INTO `users` (`Id`, `Username`, `Password`, `Email`, `Fullname`, `Type`, `Image`) VALUES
-(1, 'hoanghuy', '12345678', 'hoanghuyd6nc@gmail.com', 'Lê Hoàng Huy', 'normal', NULL),
-(33, 'admin1', '123456', 'admin1@gmail.com', 'Hoang Huy', 'VIP', 'admin1_avatar.jpg'),
-(34, 'admin2', '123456', 'admin2@gmail.com', 'Hoang Huy', 'normal', 'admin2_avatar.jpg');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -217,13 +218,13 @@ ALTER TABLE `admin_tbl`
 -- AUTO_INCREMENT cho bảng `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT cho bảng `page_images_tbl`
 --
 ALTER TABLE `page_images_tbl`
-  MODIFY `Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `page_tbl`
@@ -235,13 +236,13 @@ ALTER TABLE `page_tbl`
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
