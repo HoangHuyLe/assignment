@@ -53,6 +53,76 @@ Tài khoản test:
 - User: Username - hoanghuy , Pass - 123456
 - Admin: Username - admin , Pass - admin
 ---
+### Cấu trúc mã nguồn
+```
+assignment
+|
+└───admin
+│   └───controller
+│   │   │   check-availability.php
+│   |   │   delete-contact.php
+│   |   │   ...
+│   └───css
+│   │   │   add-user.css
+│   |   │   jquery.dataTables.css
+│   |   |   login.css
+│   |   |   style.css
+|   └───images
+│   │   │   ajax-loader.gif
+│   |   │   sort_asc_disabled.png
+│   |   |   ...
+|   └───include
+│   │   │   dbconnect.php
+│   |   │   header.php
+│   |   |   sidebar.php
+|   └───js
+│   │   │   add-user.js
+│   |   │   chang-password.js
+│   |   |   ...
+│   └───change-password.php
+|   └───contact-details.php
+|   └─── ...
+└───controller
+|   │   contactform-process.php
+└───css
+|   │   ...
+└───fonts
+|   │   ...
+└───images
+|   │   ...
+└───include
+|   │   dbconnect.php
+|   │   footer.php
+|   │   header.php
+└───js
+|   │   ...
+└───lib
+|   │   ...
+└───SQL
+|   │   assignment.sql
+└───upload
+│   └───products
+│   └───slider
+│   └───user-avatar
+└───user
+│   └───css
+│   └───facebook_lib
+│   └───google_lib
+|   └───images
+|   └───include
+|   └───js
+│   └───check_availability.php
+|   └───facebook_login.php
+|   └─── ...
+└───about.php
+└───contact.php
+└───index.php
+└───pricelist.php
+└───Readme.md
+└───search-result.php
+└───services.php    
+```
+---
 ### Hướng dẫn config mail server để gửi nhận email
 - https://www.youtube.com/watch?v=9W644cyDyNM
 - https://www.youtube.com/watch?v=L5uCc8Hab-I

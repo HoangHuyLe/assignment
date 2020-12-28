@@ -42,21 +42,21 @@ if(!isset($_SESSION['adminid'])){
                 <div class="col-6">
                     <div class="form-control-custom">
                         <label>Tên tài khoản <span style="color: red"> *</span></label>
-                        <input type="text" placeholder="hoanghuy123" id="username" name="username" />
+                        <input type="text" id="username" name="username" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Thông báo lỗi</small>
                     </div>
                     <div class="form-control-custom">
                         <label>Mật khẩu <span style="color: red"> *</span></label>
-                        <input type="password" placeholder="MatkhauDay" id="password" name="password" />
+                        <input type="password" id="password" name="password" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Thông báo lỗi</small>
                     </div>
                     <div class="form-control-custom">
                         <label>Xác nhận mật khẩu <span style="color: red"> *</span></label>
-                        <input type="password" placeholder="MatKhauDay" id="password2" name="password2" />
+                        <input type="password" id="password2" name="password2" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Thông báo lỗi</small>
@@ -65,14 +65,14 @@ if(!isset($_SESSION['adminid'])){
                 <div class="col-6">
                     <div class="form-control-custom">
                         <label>Email <span style="color: red"> *</span></label>
-                        <input type="email" placeholder="huy@gmail.com" id="email" name="email" />
+                        <input type="email" id="email" name="email" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                         <small>Thông báo lỗi</small>
                     </div>
                     <div class="form-control-custom">
                         <label>Tên đầy đủ</label>
-                        <input type="text" placeholder="Lê Hoàng Huy" id="fullname" name="fullname" />
+                        <input type="text" id="fullname" name="fullname" />
                         <i class="fa fa-check-circle"></i>
                         <i class="fa fa-exclamation-circle"></i>
                     </div>
