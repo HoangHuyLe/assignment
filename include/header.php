@@ -28,7 +28,7 @@
                             . $_SESSION['username']
                             . "</button>
                             <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-                                <a class='dropdown-item' href='edit_information.php'>Trang cá nhân</a>
+                                <a class='dropdown-item' href='users/edit_information.php'>Trang cá nhân</a>
                                 <a class='dropdown-item' href='users/logout.php'>Đăng xuất</a>                                        
                             </div>       
                         </div>                                
