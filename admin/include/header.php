@@ -44,7 +44,7 @@ $num = mysqli_num_rows($result);
         <div class='dropdown'>
             <button class='btn btn-info dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
                 <i class="fa fa-user-circle mr-1" aria-hidden="true"></i>
-                <span style="margin-right: 25px;"><?php echo $_SESSION['username'] ?></span>
+                <span style="margin-right: 25px;"><?php echo $_SESSION['adminname'] ?></span>
             </button>
             <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
                 <a class='dropdown-item' href='logout.php'>Đăng xuất</a>

@@ -16,10 +16,10 @@ function validateUsername() {
         url: "check_availability.php",
         data: 'username=' + $("#username").val(),
         type: "POST",
-        success: function (data) {
+        success: function(data) {
             $("#username-status").html(data);
         },
-        error: function () { }
+        error: function() {}
     });
 }
 
@@ -27,7 +27,7 @@ function validateEmail() {
     let email = $("#email").val();
     let mailformat = /[a-zA-Z0-9]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+/;
     if (!mailformat.test(email)) {
-        let message = "<span style='color: red;'> * Email hợp lệ theo định dạng <sth>@<sth>.<sth>! </span>";
+        let message = "<span style='color: red;'> * Email hợp lệ theo định dạng (sth)@(sth).(sth)! </span>";
         $("#email-status").html(message);
         $('#submit').prop('disabled', true);
         return false;
@@ -37,10 +37,10 @@ function validateEmail() {
         url: "check_availability.php",
         data: 'email=' + $("#email").val(),
         type: "POST",
-        success: function (data) {
+        success: function(data) {
             $("#email-status").html(data);
         },
-        error: function () { }
+        error: function() {}
     });
 }
 
@@ -62,7 +62,7 @@ function validatePassword() {
 function validateRepassword() {
     let password = $("#password").val();
     if (password != "") {
-        let repassword = $("#repassword").val();        
+        let repassword = $("#repassword").val();
         if (repassword != password) {
             let message = "<span style='color: red;'> * Mật khẩu không khớp! </span>";
             $("#repassword-status").html(message);
@@ -77,4 +77,3 @@ function validateRepassword() {
     }
     return true;
 }
-
