@@ -7,35 +7,34 @@
 - Phầm mềm hỗ trợ: XAMPP
 ---
 ### Danh sách các tính năng thiết kế:
-Chú thích: (v) - đã hoàn thành
 #### 1. Khách 
-- Xem các thông tin public trên trang web -- (v)(huy)
-- Đăng ký -- (v)(huy)
-- Đăng nhập -- (v)(huy)
-- Đăng nhập với Facebook, Google --(v)(huy)
-- Reset mật khâu qua email  -- (v)(huy)
-- Thực hiện kiểm tra dữ liệu đầu vào ở Clien side và Server side -- (v)(huy)
-#### 2. Thành viên -- (đang làm)(Bảo)
+- Xem các thông tin public trên trang web
+- Đăng ký 
+- Đăng nhập 
+- Đăng nhập với Facebook, Google
+- Reset mật khâu qua email  
+- Thực hiện kiểm tra dữ liệu đầu vào ở Clien side và Server side 
+#### 2. Thành viên
 - Thiết kế giao diện trang cá nhân
 - Thay đổi thông tin cá nhân
-- Thay đổi mật khẩu
 - Thay đổi hình đại diện
+- Thay đổi mật khẩu
 #### 3. Quản trị viên
-- Thiết kế giao diện trang quản trị -- (v)(huy)
-- Quản lý thành viên: xem, thêm, sửa, xóa, tìm kiếm -- (v)(huy)
+- Thiết kế giao diện trang quản trị 
+- Quản lý thành viên: xem, thêm, sửa, xóa, tìm kiếm 
 - Tính năng quản lý (xem, thêm, sửa, xóa) các tài nguyên của ứng dụng web như thông tin liên hệ, sản phẩm, slider, ...: 
-    - Slider ở trang chủ: xem, thêm, thay đổi slider bằng chọn ảnh đã từng uploaded hoặc tải ảnh từ máy, xóa slider -- (v) (huy)
-    - Sản phẩm ở trang chủ: xem, thêm, sửa, xóa, tìm kiếm sản phẩm; thay đổi số lượng sản phẩm được hiển thị -- (v) (huy)
-    - Xem và thay đổi thông tin ở trang liên hệ -- (v)(huy)
-    - Quản lý thông tin liên hệ từ khách hàng: -- (v) (huy)
+    - Slider ở trang chủ: xem, thêm, thay đổi slider bằng chọn ảnh đã từng uploaded hoặc tải ảnh từ máy, xóa slider
+    - Sản phẩm ở trang chủ: xem, thêm, sửa, xóa, tìm kiếm sản phẩm; thay đổi số lượng sản phẩm được hiển thị 
+    - Xem và thay đổi thông tin ở trang liên hệ 
+    - Quản lý thông tin liên hệ từ khách hàng:
         - Hệ thống gửi mail xác nhận cho khách hàng
         - Admin nhận thông báo về yêu cầu khách hàng gửi
         - Admin xem bảng yêu cầu, xem chi tiết từng yêu cầu, cập nhật yêu cầu và xóa yêu cầu. 
-    - Thay đổi mật khẩu (v)(huy)
-- Hiện thực phân trang hiển thị cho các tính năng quản lý -- (v)(huy)
+    - Thay đổi mật khẩu
+- Hiện thực phân trang hiển thị cho các tính năng quản lý 
 #### 4. Tìm kiếm
-- Tính năng tìm kiếm sản phẩm đơn giản -- (v)(huy)
-#### 5. Tính năng khác
+- Tính năng tìm kiếm sản phẩm đơn giản 
+
 ---
 ### Hướng dẫn chạy Project
 1. Download the zip file or clone this repo
@@ -49,7 +48,7 @@ Chú thích: (v) - đã hoàn thành
 
 Tài khoản test:
 - User: Username - hoanghuy , Pass - 123456
-- Admin: Username - admin , Pass - admin
+- Admin: Username - admin , Pass - 123456
 ---
 ### Cấu trúc mã nguồn
 ```
