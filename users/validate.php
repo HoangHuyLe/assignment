@@ -6,7 +6,7 @@
             return false;
         }
 
-        if(!preg_match('/(03|05|07|08|09|01[2|6|8|9])+([0-9]{7})\b/', $phone)) {
+        if(!preg_match('/(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/', $phone)) {
             alert("Server: Số điện thoại chưa hợp lệ.");
             return false;
         }

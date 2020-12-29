@@ -2,8 +2,8 @@
 
 <?php 
     session_start();
-    if(isset($_SESSION['username']) || empty($_SESSION['username'])) {
-      header("Location: ../index.php");
+    if(!isset($_SESSION['username']) || empty($_SESSION['username'])) {
+      header("Location: login.php");
     }
 ?>
 
@@ -55,14 +55,6 @@
 </head>
 
 <body id="contact" class="inner_page" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
-
-	<!-- LOADER -->
-	<div id="preloader">
-		<div class="loader">
-			<img src="../images/loader.gif" alt="#" />
-		</div>
-	</div>
-	<!-- END LOADER -->
 
 	<!-- ====== HEADER SECTION ====== -->
   <header class="top-header">
@@ -122,8 +114,8 @@
 	<!-- End header -->
 
   <?php
-    $username = "your_name";
-    $password = "your_password";
+    $username = "root";
+    $password = "";
     $hostname = "localhost"; 
     $dbname = "assignment";
 
@@ -268,7 +260,8 @@
         
         ?>
         <script type="text/javascript">
-          window.location = "http://localhost/users/change_pass.php";
+          alert("Cập nhật thành công")
+          window.location = "http://localhost/assignment/users/change_pass.php";
         </script>
         <?php
         

@@ -20,8 +20,6 @@ Chú thích: (v) - đã hoàn thành
 - Thay đổi thông tin cá nhân
 - Thay đổi mật khẩu
 - Thay đổi hình đại diện
-- Viết bình luận, đăng tin
-- Đặt yêu cầu gói dịch vụ
 #### 3. Quản trị viên
 - Thiết kế giao diện trang quản trị -- (v)(huy)
 - Quản lý thành viên: xem, thêm, sửa, xóa, tìm kiếm -- (v)(huy)
