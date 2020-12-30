@@ -5,7 +5,13 @@ $id = $_GET['id'];
 $query = "SELECT Image FROM users WHERE Id='$id'";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_array($result);
-$image_name = $row['Image'];
+
+if($row['Image'] != NULL) {
+    $image_name = $row['Image'];
+} else {
+    $image_name = '';
+}
+
 if ($image_name != '') {
     unlink("../../upload/user-avatar/" . $image_name);
 }

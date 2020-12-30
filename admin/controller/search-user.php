@@ -14,7 +14,7 @@ if (mysqli_num_rows($result) > 0) {
     $image = "";    
     while ($row = mysqli_fetch_assoc($result)) {
         if($row["Image"] != ''){
-            $image = "<img src='../users/images/user-avatar/{$row['Image']}' width='50' height='35' />";
+            $image = "<img src='../upload/user-avatar/{$row['Image']}' width='50' height='35' />";
         } else {
             $image = "";
         }

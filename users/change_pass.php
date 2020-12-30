@@ -68,15 +68,15 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                 <ul class="navbar-nav">
-                    <li><a class="nav-link" href="index.php" id="home">Trang chủ</a></li>
-                    <li><a class="nav-link" href="about.php" id="about">Giới thiệu</a></li>
-                    <li><a class="nav-link" href="services.php" id="services">Dịch vụ</a></li>
-                    <li><a class="nav-link" href="pricelist.php" id="pricelist">Bảng giá</a></li>
-                    <li><a class="nav-link" href="contact.php" id="contact">Liên hệ</a></li>
+                    <li><a class="nav-link" href="../index.php" id="home">Trang chủ</a></li>
+                    <li><a class="nav-link" href="../about.php" id="about">Giới thiệu</a></li>
+                    <li><a class="nav-link" href="../services.php" id="services">Dịch vụ</a></li>
+                    <li><a class="nav-link" href="../pricelist.php" id="pricelist">Bảng giá</a></li>
+                    <li><a class="nav-link" href="../contact.php" id="contact">Liên hệ</a></li>
                     <?php
                     if (isset($_SESSION['username']) and !empty($_SESSION['username'])) {
                         if(isset($_SESSION['userimage'])){
-                            $avatar = '<img src=../"'.$_SESSION["userimage"].'" class="img-thumbnail mr-2" style="height: 30px;"  />';
+                            $avatar = '<img src="../'.$_SESSION["userimage"].'" class="img-thumbnail mr-2" style="height: 30px;"  />';
                         } else {
                             $avatar = '<i class="fa fa-user-circle mr-2"></i>';
                         }

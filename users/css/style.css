@@ -65,3 +65,35 @@ button a:hover {
     left: 50%;
     z-index: 1060;
 }
+
+
+/* only small desktops */
+
+
+/* tablets */
+
+@media (min-width: 992px) and (max-width: 1190px) {}
+
+
+/* only small tablets */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    #gglogin {
+        margin-top: 5px;
+    }
+}
+
+
+/* mobile or only mobile */
+
+@media (max-width: 767px) {
+    #leftcol-login {
+        display: none;
+    }
+    #gglogin {
+        margin-top: 5px;
+    }
+    #leftcol-register {
+        display: none;
+    }
+}

@@ -18,7 +18,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6" id='leftcol-register'>
                 <div class="row">
                     <img src="../images/ultraman_logo.png" alt="logo">
                 </div>
@@ -26,7 +26,7 @@
                     <img src="images/login_bg.png" alt="bg" class="login-bg">
                 </div>
             </div>
-            <div class="col-6 px-4 py-3">
+            <div class="col-12 col-sm-6 px-4 py-3">
                 <div class="row">
                     <a href="login.php">
                         <i class="fa fa-angle-double-left" aria-hidden="true"></i>

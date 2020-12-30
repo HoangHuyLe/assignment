@@ -18,8 +18,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">  
+            <div class="col-sm-2"></div>
+            <div class="col-12 col-sm-8">  
 
                 <!-- Search card -->
                 <div class="card mt-5" id="search-card">

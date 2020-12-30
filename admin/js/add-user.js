@@ -45,7 +45,7 @@ $(document).ready(function() {
                             success: function(data) {
                                 $("#respone-status").html(data);
                                 $("#add").attr('disabled', false);
-                                // $("#add-form")[0].reset();
+                                $("#add-form")[0].reset();
                                 resetAllInput();
                             }
                         });

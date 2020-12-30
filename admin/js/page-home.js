@@ -183,16 +183,8 @@ $(document).ready(function() {
             method: "post",
             success: function(data) {
                 alert(data);
-                $.ajax({
-                    url: "controller/fetch-products.php",
-                    method: "post",
-                    dataType: 'json',
-                    success: function(data) {
-                        $('#tbl-products').ajax.reload({
-                            data: data
-                        });
-                    }
-                })
+                load_slider(slider_number);
+                $('#delete-slider-modal').modal('toggle');
             }
         })
     })

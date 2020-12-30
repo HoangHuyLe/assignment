@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6" id='leftcol-login'>
                 <div class="row">
                     <img src="../images/ultraman_logo.png" alt="logo">
                 </div>
@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
                     <img src="images/login_bg.png" alt="bg" class="login-bg">
                 </div>
             </div>
-            <div class="col-6 px-4 py-5">
+            <div class="col-12 col-sm-6 px-4 py-5">
                 <div class="row">
                     <div class="col-12 col-lg-6">
                         <button type="button" class="facebook">
@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
                             <a href="./facebook_login.php" > Đăng nhập qua Facebook </a>
                         </button>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" id='gglogin'>
                         <button type="button" class="google">
                             <i class="fa fa-google mr-2"></i>
                             <a href="./google_login.php" > Đăng nhập qua Google </a>

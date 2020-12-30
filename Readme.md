@@ -12,7 +12,7 @@
 - Đăng ký 
 - Đăng nhập 
 - Đăng nhập với Facebook, Google
-- Reset mật khâu qua email  
+- Reset mật khẩu qua email  
 - Thực hiện kiểm tra dữ liệu đầu vào ở Clien side và Server side 
 #### 2. Thành viên
 - Thiết kế giao diện trang cá nhân
